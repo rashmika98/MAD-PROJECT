@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".new_product">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_corner"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:hint="@string/hint1"
+        />
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_corner"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/name"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint2"
+        />
+    <EditText
+        android:id="@+id/category"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_corner"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/price"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint3"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/category"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_corner"
+        android:onClick="products"
+        android:text="@string/btn4" />
+    <!-- android:textAllCaps="false"-->
+
+
+</RelativeLayout>

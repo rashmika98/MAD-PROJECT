@@ -84,12 +84,11 @@
                                     android:layout_height="match_parent">
 
 
-                                   <ImageButton
-                                       android:layout_width="match_parent"
-                                       android:layout_height="wrap_content"
-                                       android:src="@drawable/vegetables"
-
-                                       />
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="vegCategory"
+                                        android:src="@drawable/vegetables" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -149,6 +148,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
 
+                                    android:onClick="fruitCategory"
                                     android:src="@drawable/fruits" />
 
                                 <TextView

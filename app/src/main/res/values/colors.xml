@@ -8,4 +8,10 @@
     <color name="colortextview">#cdc9c9</color>
     <color name="coloraddbutton">#0000ff</color>
     <color name="white">#fff</color>
+    <color name="grey">#E9E6E6</color>
+    <color name="turquoise">#05E7D2</color>
+    <color name="light_cyan">#E4F4F5</color>
+    <color name="lighcyan">#04FA6A</color>
+    <color name="pureWhite">#FCFCFC</color>
+    <color name="pureBlack">#0E0000</color>
 </resources>

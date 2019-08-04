@@ -4,13 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/first"
-    tools:context=".OnBoard">
-    
-    
+    tools:context=".on_board">
+
+
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slideViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.viewpager.widget.ViewPager>
+        android:layout_height="wrap_content"></androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/dotLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="700dp"
+        android:orientation="horizontal"></LinearLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="700dp"
+        android:background="@color/pureWhite"
+        android:text="@string/btn7"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="750dp"
+        android:layout_marginLeft="300dp"
+        android:text="@string/btn8"
+        android:background="@color/pureWhite"/>
+
 
 </RelativeLayout>
