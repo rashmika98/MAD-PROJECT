@@ -31,7 +31,7 @@
         android:layout_marginEnd="8dp"
 
         android:ems="10"
-        android:hint="username"
+        android:hint="@string/txt1"
         android:inputType="textPersonName"
         android:textSize="16dp"
         android:drawableLeft="@drawable/user"
@@ -50,7 +50,7 @@
         android:layout_marginBottom="8dp"
 
         android:ems="10"
-        android:hint="password"
+        android:hint="@string/txt2"
         android:drawableLeft="@drawable/password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,16 +66,16 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Login"
+        android:background="@drawable/loginbutton"
+        android:text="@string/btn1"
+        android:textColor="#fff"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="18dp"
-        android:textColor="#fff"
-        app:layout_constraintVertical_bias="0.69"
-        android:background="@drawable/loginbutton"/>
+        app:layout_constraintVertical_bias="0.69" />
 
     <Button
         android:id="@+id/button2"
@@ -86,7 +86,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/loginbutton"
         android:onClick="startNewActivity"
-        android:text="Register Here"
+        android:text="@string/btn2"
         android:textColor="#fff"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"

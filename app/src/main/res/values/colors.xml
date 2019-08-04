@@ -5,4 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color  name ="colorLogin">#00ff7f</color>
     <color name="black">#000000</color>
+    <color name="colortextview">#cdc9c9</color>
+    <color name="coloraddbutton">#0000ff</color>
+    <color name="white">#fff</color>
 </resources>

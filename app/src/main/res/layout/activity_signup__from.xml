@@ -22,7 +22,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" Full Name"
+            android:hint="@string/txt3"
             android:ems="10"
             android:inputType="text"
             android:textSize="20dp"
@@ -41,26 +41,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" user name"
-            android:ems="10"
-            android:inputType="text"
-            android:textSize="20dp"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/black"
-        android:layout_marginTop="5dp"
-
-        >
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint=" Email"
+            android:hint="@string/txt4"
             android:ems="10"
             android:inputType="text"
             android:textSize="20dp"
@@ -79,7 +60,26 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" Address"
+            android:hint="@string/txt5"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="5dp"
+
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt6"
             android:ems="10"
             android:inputType="textPostalAddress"
             android:textSize="20dp"
@@ -99,7 +99,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" phone Number"
+            android:hint="@string/txt7"
             android:ems="10"
             android:inputType="phone"
             android:textSize="20dp"
@@ -121,7 +121,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/txt8"
             android:ems="10"
             android:inputType="text"
             android:textSize="20dp"
@@ -141,7 +141,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
+            android:hint="@string/txt9"
             android:ems="10"
             android:inputType="text"
             android:textSize="20dp"
@@ -157,7 +157,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gender"
+            android:text="@string/txt10"
             android:textSize="22sp"
             />
 
@@ -165,7 +165,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Male"
+            android:text="@string/radio1"
             android:layout_marginLeft="10dp"
             android:textSize="20sp"
             />
@@ -173,7 +173,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Female"
+            android:text="@string/radio2"
             android:layout_marginLeft="10dp"
             android:textSize="20sp"
             />
@@ -183,7 +183,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="@string/btn3"
         android:textSize="23dp"
         android:textColor="#fff"
         android:background="@drawable/loginbutton"
