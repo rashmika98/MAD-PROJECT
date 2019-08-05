@@ -105,15 +105,15 @@
 
 
                                 <Button
+                                    android:id="@+id/buttonPanel1"
                                     android:layout_width="120dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/buttonPanel1"
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginTop="190dp"
                                     android:background="@drawable/cart_corner"
-                                    android:text="@string/cart"
+                                    android:onClick="cart1"
 
-                                    />
+                                    android:text="@string/cart" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -181,9 +181,9 @@
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginTop="190dp"
                                     android:background="@drawable/cart_corner"
-                                    android:text="@string/cart"
+                                    android:onClick="cart1"
 
-                                    />
+                                    android:text="@string/cart" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -252,16 +252,15 @@
                                     android:textColor="@color/colorAccent"/>
 
 
-
                                 <Button
+                                    android:id="@+id/buttonPanel3"
                                     android:layout_width="120dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/buttonPanel3"
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginTop="190dp"
                                     android:background="@drawable/cart_corner"
-                                    android:text="@string/cart"
-                                    />
+                                    android:onClick="cart1"
+                                    android:text="@string/cart" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -322,17 +321,16 @@
                                     android:textColor="@color/colorAccent"/>
 
 
-
                                 <Button
+                                    android:id="@+id/buttonPanel4"
                                     android:layout_width="120dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/buttonPanel4"
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginTop="190dp"
                                     android:background="@drawable/cart_corner"
-                                    android:text="@string/cart"
+                                    android:onClick="cart1"
 
-                                    />
+                                    android:text="@string/cart" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -406,15 +404,15 @@
 
 
                                 <Button
+                                    android:id="@+id/buttonPanel5"
                                     android:layout_width="120dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/buttonPanel5"
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginTop="190dp"
                                     android:background="@drawable/cart_corner"
-                                    android:text="@string/cart"
+                                    android:onClick="cart1"
 
-                                    />
+                                    android:text="@string/cart" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -476,14 +474,14 @@
 
 
                                 <Button
+                                    android:id="@+id/buttonPanel6"
                                     android:layout_width="120dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/buttonPanel6"
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginTop="190dp"
                                     android:background="@drawable/cart_corner"
-                                    android:text="@string/cart"
-                                    />
+                                    android:onClick="cart1"
+                                    android:text="@string/cart" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -557,15 +555,15 @@
 
 
                                 <Button
+                                    android:id="@+id/buttonPanel7"
                                     android:layout_width="120dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/buttonPanel7"
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginTop="190dp"
                                     android:background="@drawable/cart_corner"
-                                    android:text="@string/cart"
+                                    android:onClick="cart1"
 
-                                    />
+                                    android:text="@string/cart" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -627,14 +625,14 @@
 
 
                                 <Button
+                                    android:id="@+id/buttonPanel8"
                                     android:layout_width="120dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/buttonPanel8"
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginTop="190dp"
                                     android:background="@drawable/cart_corner"
-                                    android:text="@string/cart"
-                                    />
+                                    android:onClick="cart1"
+                                    android:text="@string/cart" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
