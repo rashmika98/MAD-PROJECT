@@ -40,5 +40,16 @@
         android:text="@string/btn8"
         android:background="@color/pureWhite"/>
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:onClick="FristLogin"
+
+        android:text="Button"
+        android:visibility="invisible" />
+
 
 </RelativeLayout>
