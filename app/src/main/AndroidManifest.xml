@@ -20,13 +20,14 @@
         <activity android:name=".dashboard" />
         <activity android:name=".edit_orders" />
         <activity android:name=".orders" />
+        <activity android:name=".DeliveryProfile" />
+        <activity android:name=".DeliveryReport" />
+        <activity android:name=".OrderList" />
         <activity android:name=".Grocery" />
         <activity android:name=".ManagerEmployee" />
         <activity android:name=".AddNewDeliveryBoy" />
         <activity android:name=".ManagerDashboard" />
-        <activity android:name=".DeliveryProfile" />
-        <activity android:name=".DeliveryReport" />
-        <activity android:name=".OrderList" />
+
         <activity android:name=".Signup_From" />
         <activity android:name=".MainActivity">
             <intent-filter>
