@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -22,7 +21,6 @@ public class on_board extends AppCompatActivity {
 
     private Button mNextBtn;
     private Button mBackBtn;
-    private Button mLogBtn;
 
     private  int mCurrentPage;
 
@@ -37,7 +35,6 @@ public class on_board extends AppCompatActivity {
 
         mNextBtn = (Button) findViewById(R.id.button6);
         mBackBtn = (Button) findViewById(R.id.button5);
-        mLogBtn = (Button) findViewById(R.id.button3);
 
         sliderAdapter = new SliderAdapter(this);
 
@@ -65,18 +62,6 @@ public class on_board extends AppCompatActivity {
                 mSlideViewPager.setCurrentItem(mCurrentPage - 1);
             }
         });
-
-        mLogBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(mainActivity);
-
-                finish();
-            }
-        });
-
     }
 
     public void addDotsIndicator(int position){
@@ -120,7 +105,6 @@ public class on_board extends AppCompatActivity {
                 mBackBtn.setEnabled(false);
 
                 mBackBtn.setVisibility(View.INVISIBLE);
-                mLogBtn.setVisibility(View.INVISIBLE);
 
                 mNextBtn.setText("NEXT");
                 mBackBtn.setText("");
@@ -131,8 +115,6 @@ public class on_board extends AppCompatActivity {
                 mBackBtn.setEnabled(true);
 
                 mBackBtn.setVisibility(View.VISIBLE);
-                mLogBtn.setVisibility(View.VISIBLE);
-
 
                 mNextBtn.setText("FINISH");
                 mBackBtn.setText("BACK");
@@ -143,8 +125,6 @@ public class on_board extends AppCompatActivity {
                 mBackBtn.setEnabled(true);
 
                 mBackBtn.setVisibility(View.VISIBLE);
-                mLogBtn.setVisibility(View.INVISIBLE);
-
 
                 mNextBtn.setText("NEXT");
                 mBackBtn.setText("BACK");
@@ -157,9 +137,4 @@ public class on_board extends AppCompatActivity {
 
         }
     };
-
-    public void FristLogin(View view){
-        Intent intent = new Intent(on_board.this, MainActivity.class);
-        startActivity(intent);
-    }
 }
