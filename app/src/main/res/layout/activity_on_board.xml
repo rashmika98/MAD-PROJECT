@@ -40,5 +40,14 @@
         android:text="@string/btn8"
         android:background="@color/pureWhite"/>
 
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/start"
+        android:layout_marginTop="450dp"
+        android:background="@drawable/button_corner"/>
+
 
 </RelativeLayout>

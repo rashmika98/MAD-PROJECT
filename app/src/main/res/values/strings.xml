@@ -83,30 +83,4 @@
     <string name="cat2">FRUITS</string>
     <string name="btn7">BACK</string>
     <string name="btn8">NEXT</string>
-
-
-    <string name="textView">First Name</string>
-    <string name="textView2">Last Namme</string>
-    <string name="textView3">E-mail</string>
-    <string name="textView4">Birth Date</string>
-    <string name="textView5">Sex</string>
-    <string name="textView6">City</string>
-    <string name="textView7">Item 01</string>
-    <string name="textView8">LKR 222</string>
-    <string name="textView9">Item 02</string>
-    <string name="textView10">LKR 222</string>
-    <string name="textView11">Item 03</string>
-    <string name="textView12">LKR 222</string>
-    <string name="textView13">Item 04</string>
-    <string name="textView14">LKR 222</string>
-    <string name="button">Update Details</string>
-    <string name="button2">Delete Account</string>
-    <string name="radioButton">Male</string>
-    <string name="radioButton2">Female</string>
-    <string name="button4">Remove</string>
-    <string name="button8">Remove</string>
-    <string name="button9">Remove</string>
-    <string name="button10">Remove</string>
-    <string name="button11">Checkout</string>
-    <string name="imagebutton4">Home</string>
 </resources>

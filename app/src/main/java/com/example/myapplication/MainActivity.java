@@ -44,17 +44,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent2 = new Intent(MainActivity.this,dashboard.class);
             startActivity(intent2);
             Toast.makeText(getApplicationContext(),"Login Pass!!",Toast.LENGTH_LONG).show();
-        }else if((username.equals("customer")) && (password.equals("0000"))){
-            Intent intent2 = new Intent(MainActivity.this,UserProfile.class);
-            startActivity(intent2);
-            Toast.makeText(getApplicationContext(),"Login Pass!!",Toast.LENGTH_LONG).show();
         }
-
         else{
             Toast.makeText(getApplicationContext(),"Invalid Password or Username",Toast.LENGTH_LONG).show();
         }
-
-
     }
 
 
