@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManagerDashboard"></activity>
+        <activity android:name=".on_board"></activity>
         <activity android:name=".veg_category" />
         <activity android:name=".fruit_category" />
         <activity android:name=".edit_product" />
@@ -21,7 +21,7 @@
         <activity android:name=".Grocery" />
         <activity android:name=".ManagerEmployee" />
         <activity android:name=".AddNewDeliveryBoy" />
-        <activity android:name=".on_board" />
+        <activity android:name=".ManagerDashboard" />
         <activity android:name=".Signup_From" />
         <activity android:name=".MainActivity">
             <intent-filter>
