@@ -2,11 +2,20 @@ package com.example.myapplication;
 
 public class Item {
 
+    private String ItemID;
     private String ProductName;
     private Double price;
     private String Category;
 
     public Item() {
+    }
+
+    public String getItemID() {
+        return ItemID;
+    }
+
+    public void setItemID(String itemID) {
+        ItemID = itemID;
     }
 
     public String getProductName() {

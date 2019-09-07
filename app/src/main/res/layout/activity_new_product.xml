@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".new_product">
 
+
+    <EditText
+        android:id="@+id/ItemID"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_corner"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:hint="@string/hint4"
+        />
     <EditText
         android:id="@+id/name"
         android:layout_width="300dp"
@@ -13,7 +24,8 @@
         android:background="@drawable/edit_corner"
         android:paddingLeft="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_below="@id/ItemID"
+        android:layout_marginTop="10dp"
         android:hint="@string/hint1"
         />
     <EditText
@@ -47,6 +59,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/button_corner"
+        android:onClick="Dashboard"
         android:text="@string/btn4" />
     <!-- android:textAllCaps="false"-->
 

@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class new_product extends AppCompatActivity {
 
-    EditText txtName, txtPrice, txtCat;
+    EditText txtID, txtName, txtPrice, txtCat;
     Button btnInsert;
 
     DatabaseReference ref;
@@ -26,6 +27,7 @@ public class new_product extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_product);
 
+        txtID = findViewById(R.id.ItemID);
         txtName = findViewById(R.id.name);
         txtPrice = findViewById(R.id.price);
         txtCat = findViewById(R.id.category);
@@ -38,17 +40,19 @@ public class new_product extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                item.setItemID(txtID.getText().toString());
                 item.setProductName(txtName.getText().toString());
                 item.setPrice(Double.parseDouble(txtPrice.getText().toString()));
                 item.setCategory(txtCat.getText().toString());
 
                 ref = FirebaseDatabase.getInstance().getReference().child("Item");
 
-               // ref.child(item.getProductName()).setValue(item);
+                ref.child(item.getItemID()).setValue(item);
 
-                ref.push().setValue(item);
-               // Toast.makeText(getApplicationContext(), "Insert Successfully", Toast.LENGTH_SHORT).show();
-                Toast.makeText(new_product.this, "Success", Toast.LENGTH_SHORT).show();
+
+//                ref.push().setValue(item);
+
+                Toast.makeText(new_product.this, "Item Inserted Successfully", Toast.LENGTH_SHORT).show();
 
                 clearAll();
             }
@@ -58,10 +62,20 @@ public class new_product extends AppCompatActivity {
     }
 
 
+
+
     public void clearAll(){
 
+        txtID.setText("");
         txtName.setText("");
         txtPrice.setText("");
         txtCat.setText("");
     }
+
+
+    public void Dashboard(View view){
+        Intent intent = new Intent(new_product.this, dashboard.class);
+        startActivity(intent);
+    }
+
 }
