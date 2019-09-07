@@ -25,31 +25,32 @@
             />
 
             <EditText
+                android:id="@+id/adtxt1"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="120dp"
-                android:hint="@string/txt3"
-                android:textColor="@color/black"
                 android:background="@drawable/textview"
+                android:hint="@string/txt3"
                 android:inputType="text"
                 android:paddingLeft="20dp"
-                />
+                android:textColor="@color/black" />
 
 
             <EditText
+                android:id="@+id/adtxt2"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="180dp"
-                android:hint="@string/txt18"
-                android:textColor="@color/black"
                 android:background="@drawable/textview"
+                android:hint="@string/txt18"
                 android:inputType="text"
                 android:paddingLeft="20dp"
-                />
+                android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/adtxt3"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
@@ -58,22 +59,21 @@
                 android:hint="@string/txt6"
                 android:inputType="text"
                 android:paddingLeft="20dp"
-                android:textColor="@color/black"
 
-                />
+                android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/adtxt4"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="300dp"
-                android:hint="@string/txt5"
-                android:textColor="@color/black"
                 android:background="@drawable/textview"
+                android:hint="@string/txt5"
                 android:inputType="text"
                 android:paddingLeft="20dp"
 
-                />
+                android:textColor="@color/black" />
 
             <EditText
                 android:layout_width="300dp"
@@ -90,66 +90,53 @@
 
 
             <EditText
+                android:id="@+id/adtxt5"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="360dp"
-                android:hint="@string/txt8"
-                android:textColor="@color/black"
                 android:background="@drawable/textview"
+                android:hint="@string/txt19"
                 android:inputType="phone"
                 android:paddingLeft="20dp"
 
-                />
+                android:textColor="@color/black" />
+
             <EditText
+                android:id="@+id/adtxt6"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="420dp"
-                android:hint="@string/txt19"
-                android:textColor="@color/black"
                 android:background="@drawable/textview"
+                android:hint="@string/txt4"
                 android:inputType="text"
                 android:paddingLeft="20dp"
 
-                />
+                android:textColor="@color/black" />
 
 
             <EditText
+                android:id="@+id/adtxt7"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="480dp"
-                android:hint="@string/txt4"
-                android:textColor="@color/black"
                 android:background="@drawable/textview"
-                android:inputType="text"
-                android:paddingLeft="20dp"
-
-                />
-
-
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="540dp"
                 android:hint="@string/txt8"
-                android:textColor="@color/black"
-                android:background="@drawable/textview"
                 android:inputType="text"
                 android:paddingLeft="20dp"
 
-                />
+                android:textColor="@color/black" />
 
 
             <Button
+                android:id="@+id/adbtn1"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="58dp"
                 android:layout_marginTop="620dp"
                 android:background="@drawable/addbutton"
-                android:onClick="viewDetails"
                 android:text="@string/btn4"
                 android:textColor="#fff"
                 android:textSize="23dp" />
