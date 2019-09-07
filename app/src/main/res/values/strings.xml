@@ -83,14 +83,12 @@
     <string name="cat2">FRUITS</string>
     <string name="btn7">BACK</string>
     <string name="btn8">NEXT</string>
-
-
-
-
+    <string name="start">GET START</string>
+    <string name="backDash">BACK TO DASHBOARD</string>
 
 
     <string name="textView">First Name</string>
-    <string name="textView2">Last Namme</string>
+    <string name="textView2">Last Name</string>
     <string name="textView3">E-mail</string>
     <string name="textView4">Birth Date</string>
     <string name="textView5">Sex</string>
@@ -112,6 +110,14 @@
     <string name="button9">Remove</string>
     <string name="button10">Remove</string>
     <string name="button11">Checkout</string>
+    <string name="sample1">001A</string>
+    <string name="sample2">C001</string>
+    <string name="sample3">Rashmika De. SIiva</string>
+    <string name="sample4">MALABE</string>
+    <string name="sample5">Delivered</string>
+    <string name="sample6">D0023</string>
+    <string name="btn9">DELETE</string>
+    <string name="logout">LOG OUT</string>
 
 
 </resources>

@@ -3,6 +3,8 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -21,6 +23,8 @@ public class on_board extends AppCompatActivity {
 
     private Button mNextBtn;
     private Button mBackBtn;
+    private Button mLogBtn;
+
 
     private  int mCurrentPage;
 
@@ -30,11 +34,19 @@ public class on_board extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_board);
 
+        if(restorePrefData()){
+
+            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(intent);
+
+        }
+
         mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.dotLayout);
 
         mNextBtn = (Button) findViewById(R.id.button6);
         mBackBtn = (Button) findViewById(R.id.button5);
+        mLogBtn = (Button) findViewById(R.id.button7);
 
         sliderAdapter = new SliderAdapter(this);
 
@@ -62,6 +74,30 @@ public class on_board extends AppCompatActivity {
                 mSlideViewPager.setCurrentItem(mCurrentPage - 1);
             }
         });
+
+        mLogBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                savePrefsData();
+                finish();
+            }
+        });
+    }
+
+    public boolean restorePrefData() {
+        SharedPreferences pref = getApplication().getSharedPreferences("myPrefs", MODE_PRIVATE);
+        Boolean isIntroActivityOpenedBefore = pref.getBoolean("isIntroOpened", false);
+        return isIntroActivityOpenedBefore;
+    }
+
+    public void savePrefsData(){
+        SharedPreferences pref = getApplication().getSharedPreferences("myPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putBoolean("isIntroOpened", true);
+        editor.commit();
     }
 
     public void addDotsIndicator(int position){
@@ -105,6 +141,7 @@ public class on_board extends AppCompatActivity {
                 mBackBtn.setEnabled(false);
 
                 mBackBtn.setVisibility(View.INVISIBLE);
+                mLogBtn.setVisibility(View.INVISIBLE);
 
                 mNextBtn.setText("NEXT");
                 mBackBtn.setText("");
@@ -115,6 +152,7 @@ public class on_board extends AppCompatActivity {
                 mBackBtn.setEnabled(true);
 
                 mBackBtn.setVisibility(View.VISIBLE);
+                mLogBtn.setVisibility(View.VISIBLE);
 
                 mNextBtn.setText("FINISH");
                 mBackBtn.setText("BACK");
@@ -125,6 +163,7 @@ public class on_board extends AppCompatActivity {
                 mBackBtn.setEnabled(true);
 
                 mBackBtn.setVisibility(View.VISIBLE);
+                mLogBtn.setVisibility(View.INVISIBLE);
 
                 mNextBtn.setText("NEXT");
                 mBackBtn.setText("BACK");

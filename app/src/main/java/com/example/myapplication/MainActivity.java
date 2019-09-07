@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,10 +19,30 @@ public class MainActivity extends AppCompatActivity {
     Button login;
 
 
+    RelativeLayout layout;
+    Handler handler = new Handler();
+
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+
+            layout.setVisibility(View.VISIBLE);
+
+        }
+    };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        layout =  (RelativeLayout) findViewById(R.id.layout1);
+
+        handler.postDelayed(runnable, 1500);
+
+
 
         name=findViewById(R.id.editText);
         pass=findViewById(R.id.editText3);

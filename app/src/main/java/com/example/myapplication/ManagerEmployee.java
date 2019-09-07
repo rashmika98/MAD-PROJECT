@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,7 @@ public class ManagerEmployee extends AppCompatActivity {
         table.setColumnCollapsed(5, table_flg);
         table.setColumnCollapsed(6, table_flg);
         table.setColumnCollapsed(7, table_flg);
+        table.setColumnCollapsed(8, table_flg);
 
 
         if (table_flg){
@@ -44,4 +46,10 @@ public class ManagerEmployee extends AppCompatActivity {
             switchBtn.setText("HIDE DETAILS");
         }
     }
+
+    public void backDashboard(View view){
+        Intent intent = new Intent(ManagerEmployee.this, ManagerDashboard.class);
+        startActivity(intent);
+    }
+
 }

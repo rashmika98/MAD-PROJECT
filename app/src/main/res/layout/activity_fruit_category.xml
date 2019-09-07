@@ -101,7 +101,7 @@
                                     android:layout_marginBottom="10dp"
                                     android:text="@string/price1"
                                     android:textSize="25sp"
-                                    android:textColor="@color/colorAccent"/>
+                                    android:textColor="@color/colorAccents"/>
 
 
                                 <Button
@@ -171,7 +171,7 @@
                                     android:layout_marginBottom="10dp"
                                     android:text="@string/price2"
                                     android:textSize="25sp"
-                                    android:textColor="@color/colorAccent"/>
+                                    android:textColor="@color/colorAccents"/>
 
 
                                 <Button
@@ -249,7 +249,7 @@
                                     android:layout_marginBottom="10dp"
                                     android:text="@string/price3"
                                     android:textSize="25sp"
-                                    android:textColor="@color/colorAccent"/>
+                                    android:textColor="@color/colorAccents"/>
 
 
                                 <Button
@@ -318,7 +318,7 @@
                                     android:layout_marginBottom="10dp"
                                     android:text="@string/price2"
                                     android:textSize="25sp"
-                                    android:textColor="@color/colorAccent"/>
+                                    android:textColor="@color/colorAccents"/>
 
 
                                 <Button
@@ -400,7 +400,7 @@
                                     android:layout_marginBottom="10dp"
                                     android:text="@string/price3"
                                     android:textSize="25sp"
-                                    android:textColor="@color/colorAccent"/>
+                                    android:textColor="@color/colorAccents"/>
 
 
                                 <Button
@@ -470,7 +470,7 @@
                                     android:layout_marginBottom="10dp"
                                     android:text="@string/price2"
                                     android:textSize="25sp"
-                                    android:textColor="@color/colorAccent"/>
+                                    android:textColor="@color/colorAccents"/>
 
 
                                 <Button
@@ -551,7 +551,7 @@
                                     android:layout_marginBottom="10dp"
                                     android:text="@string/price3"
                                     android:textSize="25sp"
-                                    android:textColor="@color/colorAccent"/>
+                                    android:textColor="@color/colorAccents"/>
 
 
                                 <Button
@@ -621,7 +621,7 @@
                                     android:layout_marginBottom="10dp"
                                     android:text="@string/price2"
                                     android:textSize="25sp"
-                                    android:textColor="@color/colorAccent"/>
+                                    android:textColor="@color/colorAccents"/>
 
 
                                 <Button

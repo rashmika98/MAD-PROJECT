@@ -38,6 +38,18 @@ public class ManagerDashboard<button> extends AppCompatActivity {
         startActivity(i1);
     }
 
+    public void cusView(View view)
+    {
+        Intent i1 = new Intent (ManagerDashboard.this,cus_view.class);
+        startActivity(i1);
+    }
+
+    public void Logout(View view){
+        Intent intent = new Intent(ManagerDashboard.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

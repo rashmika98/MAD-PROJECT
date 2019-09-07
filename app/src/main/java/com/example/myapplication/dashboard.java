@@ -28,4 +28,16 @@ public class dashboard extends AppCompatActivity {
         Intent intent = new Intent(dashboard.this, products.class);
         startActivity(intent);
     }
+
+    public void removeProduct(View view){
+        Intent intent = new Intent(dashboard.this, product_remove.class);
+        startActivity(intent);
+    }
+
+    public void Logout(View view){
+        Intent intent = new Intent(dashboard.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+
 }

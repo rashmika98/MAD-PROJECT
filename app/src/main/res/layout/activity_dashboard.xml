@@ -311,11 +311,11 @@
                                     android:textSize="18sp" />
 
                                 <Button
+                                    android:id="@+id/buttonPanel6"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/buttonPanel6"
                                     android:background="@android:color/transparent"
-                                    />
+                                    android:onClick="removeProduct" />
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
@@ -324,7 +324,14 @@
 
                 </LinearLayout>
 
-
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="800dp"
+                    android:background="@drawable/edit_corner"
+                    android:onClick="Logout"
+                    android:text="@string/logout" />
 
             </RelativeLayout>
 

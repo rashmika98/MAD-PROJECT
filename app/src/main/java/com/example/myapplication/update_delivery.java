@@ -6,19 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class AddNewDeliveryBoy extends AppCompatActivity {
+public class update_delivery extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_new_delivery_boy);
+        setContentView(R.layout.activity_update_delivery);
     }
 
-    public void viewDetails(View view){
-        Intent intent = new Intent(AddNewDeliveryBoy.this, ManagerEmployee.class);
+    public void backOrders(View view){
+        Intent intent = new Intent(update_delivery.this, orders.class);
         startActivity(intent);
     }
-
-
-
 }

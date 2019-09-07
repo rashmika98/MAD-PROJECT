@@ -110,17 +110,21 @@
 
     <Button
         android:id="@+id/switchBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="collapseTable"
+        android:background="@drawable/cart_corner"
         android:text="@string/btn5" />
 
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="end"
         android:layout_marginTop="100dp"
-        android:layout_gravity="end" />
+        android:background="@drawable/button_corner"
+        android:text="@string/backDash"
+        android:onClick="backDashboard" />
 
 </LinearLayout>

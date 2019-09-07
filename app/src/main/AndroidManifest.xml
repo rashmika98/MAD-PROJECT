@@ -9,27 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddToCart"></activity>
-        <activity android:name=".on_board" />
+        <activity android:name=".product_remove"></activity>
+        <activity android:name=".update_delivery" />
+        <activity android:name=".cus_view" />
         <activity android:name=".veg_category" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".fruit_category" />
         <activity android:name=".edit_product" />
         <activity android:name=".products" />
-        <activity android:name=".UserProfile" />
         <activity android:name=".new_product" />
         <activity android:name=".dashboard" />
         <activity android:name=".edit_orders" />
         <activity android:name=".orders" />
-        <activity android:name=".DeliveryProfile" />
-        <activity android:name=".DeliveryReport" />
-        <activity android:name=".OrderList" />
         <activity android:name=".Grocery" />
         <activity android:name=".ManagerEmployee" />
         <activity android:name=".AddNewDeliveryBoy" />
         <activity android:name=".ManagerDashboard" />
-
+        <activity android:name=".DeliveryProfile" />
+        <activity android:name=".DeliveryReport" />
+        <activity android:name=".OrderList" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".AddToCart" />
         <activity android:name=".Signup_From" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".on_board">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

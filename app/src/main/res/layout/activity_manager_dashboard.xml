@@ -363,12 +363,13 @@
                                    android:layout_marginBottom="10dp"
 
                                    />
+
                                <Button
+                                   android:id="@+id/buttoncus"
                                    android:layout_width="match_parent"
                                    android:layout_height="match_parent"
-                                   android:id="@+id/buttoncus"
                                    android:background="@android:color/transparent"
-                                   />
+                                   android:onClick="cusView" />
 
                            </RelativeLayout>
 
@@ -380,6 +381,16 @@
                    </LinearLayout>
 
                </LinearLayout>
+
+               <Button
+                   android:layout_width="150dp"
+                   android:layout_height="70dp"
+                   android:layout_marginLeft="200dp"
+                   android:layout_marginTop="800dp"
+                   android:background="@drawable/edit_corner"
+                   android:onClick="Logout"
+                   android:text="@string/logout" />
+
 
            </RelativeLayout>
        </LinearLayout>

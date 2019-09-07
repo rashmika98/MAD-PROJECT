@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,5 +41,15 @@ public class orders extends AppCompatActivity {
             table_flg = true;
             switchBtn.setText("HIDE DETAILS");
         }
+    }
+
+    public void editOrder(View view){
+        Intent intent = new Intent(orders.this, update_delivery.class);
+        startActivity(intent);
+    }
+
+    public void backDashboard(View view){
+        Intent intent = new Intent(orders.this, ManagerDashboard.class);
+        startActivity(intent);
     }
 }

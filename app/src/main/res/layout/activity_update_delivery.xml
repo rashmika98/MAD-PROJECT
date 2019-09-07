@@ -4,13 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNewDeliveryBoy"
-    android:background="@drawable/background"
-    >
+    tools:context=".update_delivery">
 
-<ScrollView
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,16 +20,17 @@
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/mad"
                 android:layout_marginTop="30dp"
-            />
+                />
 
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="120dp"
-                android:hint="@string/txt3"
+                android:hint="@string/column9"
+                android:text="@string/sample1"
                 android:textColor="@color/black"
-                android:background="@drawable/textview"
+                android:background="@drawable/text_background"
                 android:inputType="text"
                 android:paddingLeft="20dp"
                 />
@@ -42,9 +41,10 @@
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="180dp"
-                android:hint="@string/txt18"
+                android:hint="@string/column10"
+                android:text="@string/sample2"
                 android:textColor="@color/black"
-                android:background="@drawable/textview"
+                android:background="@drawable/text_background"
                 android:inputType="text"
                 android:paddingLeft="20dp"
                 />
@@ -54,8 +54,9 @@
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="240dp"
-                android:background="@drawable/textview"
-                android:hint="@string/txt6"
+                android:background="@drawable/text_background"
+                android:hint="@string/column11"
+                android:text="@string/sample3"
                 android:inputType="text"
                 android:paddingLeft="20dp"
                 android:textColor="@color/black"
@@ -67,9 +68,10 @@
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="300dp"
-                android:hint="@string/txt5"
+                android:hint="@string/column3"
+                android:text="@string/sample4"
                 android:textColor="@color/black"
-                android:background="@drawable/textview"
+                android:background="@drawable/text_background"
                 android:inputType="text"
                 android:paddingLeft="20dp"
 
@@ -94,9 +96,10 @@
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="360dp"
-                android:hint="@string/txt8"
+                android:hint="@string/column12"
+                android:text="@string/sample5"
                 android:textColor="@color/black"
-                android:background="@drawable/textview"
+                android:background="@drawable/text_background"
                 android:inputType="phone"
                 android:paddingLeft="20dp"
 
@@ -106,37 +109,10 @@
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="420dp"
-                android:hint="@string/txt19"
+                android:hint="@string/column13"
+                android:text="@string/sample6"
                 android:textColor="@color/black"
-                android:background="@drawable/textview"
-                android:inputType="text"
-                android:paddingLeft="20dp"
-
-                />
-
-
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="480dp"
-                android:hint="@string/txt4"
-                android:textColor="@color/black"
-                android:background="@drawable/textview"
-                android:inputType="text"
-                android:paddingLeft="20dp"
-
-                />
-
-
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="540dp"
-                android:hint="@string/txt8"
-                android:textColor="@color/black"
-                android:background="@drawable/textview"
+                android:background="@drawable/text_background"
                 android:inputType="text"
                 android:paddingLeft="20dp"
 
@@ -147,10 +123,10 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="68dp"
-                android:layout_marginTop="620dp"
+                android:layout_marginTop="550dp"
                 android:background="@drawable/addbutton"
-                android:onClick="viewDetails"
-                android:text="@string/btn4"
+                android:onClick="backOrders"
+                android:text="@string/btn6"
                 android:textColor="#fff"
                 android:textSize="23dp" />
 
@@ -169,7 +145,6 @@
 
 
 
-</ScrollView>
-
+    </ScrollView>
 
 </RelativeLayout>

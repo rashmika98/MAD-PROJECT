@@ -14,4 +14,7 @@
     <color name="lighcyan">#04FA6A</color>
     <color name="pureWhite">#FCFCFC</color>
     <color name="pureBlack">#0E0000</color>
+    <color name="background">#C3F0EA</color>
+    <color name="textBackground">#DAF0C1</color>
+    <color name="colorAccents">#D81B60</color>
 </resources>
