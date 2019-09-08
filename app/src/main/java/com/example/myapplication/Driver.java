@@ -58,7 +58,7 @@ public class Driver {
         return dLicense;
     }
 
-    public void setdLicense(Integer dLicense) {
+    public void setdLicense(int dLicense) {
         this.dLicense = dLicense;
     }
 

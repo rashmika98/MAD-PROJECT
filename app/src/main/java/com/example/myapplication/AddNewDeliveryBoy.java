@@ -52,6 +52,7 @@ public class AddNewDeliveryBoy extends AppCompatActivity {
 
                 ref = FirebaseDatabase.getInstance().getReference().child("  Driver");
                 //ref.child(String.valueOf(driver.getdLicense())).setValue(driver);
+                ref.child(driver.getNic()).setValue(driver);
 //                ref.child((driver.getName())).setValue(driver);
 
                 ref.push().setValue( driver);

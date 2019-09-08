@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RemoveDriver"
+    android:background="@drawable/background"
+    >
+
+
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/reSearch"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt18"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black" />
+
+
+            <Button
+                android:id="@+id/btnsearch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_below="@+id/reSearch"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/addbutton"
+                android:text="@string/btn4"
+                android:textColor="#fff"
+                android:textSize="23dp" />
+
+
+
+
+            <EditText
+                android:id="@+id/adtxt1"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/btnsearch"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt3"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black" />
+
+
+            <EditText
+                android:id="@+id/adtxt2"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt18"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/adtxt3"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt6"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/adtxt4"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/adtxt3"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt5"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+
+                android:textColor="@color/black" />
+
+
+
+
+            <EditText
+                android:id="@+id/adtxt5"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt4"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt19"
+                android:inputType="phone"
+                android:paddingLeft="20dp"
+
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/adtxt6"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt5"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt4"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+
+                android:textColor="@color/black" />
+
+
+            <EditText
+                android:id="@+id/adtxt7"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt6"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt8"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+
+                android:textColor="@color/black" />
+
+
+            <Button
+                android:id="@+id/rebtn1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_below="@id/adtxt7"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/addbutton"
+                android:text="@string/btn9"
+                android:textColor="#fff"
+                android:textSize="23dp" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
+
+
+
+
+

@@ -21,7 +21,8 @@ public class ManagerDashboard<button> extends AppCompatActivity {
 
     public void Employee(View view)
     {
-        Intent i1 = new Intent (ManagerDashboard.this,ManagerEmployee.class);
+//        Intent i1 = new Intent (ManagerDashboard.this,ManagerEmployee.class);
+        Intent i1 = new Intent (ManagerDashboard.this,RemoveDriver.class);
         startActivity(i1);
     }
 

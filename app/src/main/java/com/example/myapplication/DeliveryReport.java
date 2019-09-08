@@ -27,6 +27,7 @@ public class DeliveryReport extends AppCompatActivity {
 
 
 
+//        Order_Id_txt = findViewById(R.id.Order_Id_txt);
         Order_Id_txt = findViewById(R.id.Order_Id_txt);
         Address_txt = findViewById(R.id.Address_txt);
         Delivery_T_txt = findViewById(R.id.Delivery_T_txt );
