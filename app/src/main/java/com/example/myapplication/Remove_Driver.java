@@ -20,7 +20,7 @@ public class Remove_Driver extends AppCompatActivity {
     EditText txtSearch, txtName, txtNIC, txtAddress, txtEmail,txtDLicense, txtuName, txtPassword;
     Button btnSearch, btnDelete;
 
-    DatabaseReference ref;
+    DatabaseReference DBref;
 
     Driver driver;
 
@@ -49,8 +49,8 @@ public class Remove_Driver extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                DatabaseReference SearchRef = FirebaseDatabase.getInstance().getReference().child(" Driver").child(txtSearch.getText().toString());
-                SearchRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                DatabaseReference FindRef = FirebaseDatabase.getInstance().getReference().child("Driver").child(txtSearch.getText().toString());
+                FindRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -93,8 +93,8 @@ public class Remove_Driver extends AppCompatActivity {
 
                         if (dataSnapshot.hasChild(txtNIC.getText().toString())){
 
-                            ref = FirebaseDatabase.getInstance().getReference().child("Driver").child(txtNIC.getText().toString());
-                            ref.removeValue();
+                            DBref = FirebaseDatabase.getInstance().getReference().child("Driver").child(txtNIC.getText().toString());
+                            DBref.removeValue();
                             clearAll();
 
                             Toast.makeText(Remove_Driver.this, "Remove Successfully", Toast.LENGTH_SHORT).show();

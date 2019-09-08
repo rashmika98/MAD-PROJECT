@@ -42,7 +42,7 @@
                 android:layout_below="@+id/reSearch"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/addbutton"
-                android:text="@string/btn4"
+                android:text="@string/btn10"
                 android:textColor="#fff"
                 android:textSize="23dp" />
 

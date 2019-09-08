@@ -86,7 +86,7 @@ public class Remove_Product extends AppCompatActivity {
 
                             ref = FirebaseDatabase.getInstance().getReference().child("Item").child(txtIdItem.getText().toString());
                             ref.removeValue();
-//                            clearAll();
+                            clearAll();
 
                             Toast.makeText(Remove_Product.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
 
