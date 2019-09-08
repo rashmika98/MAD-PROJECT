@@ -6,6 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".edit_product">
 
+
+    <EditText
+        android:id="@+id/ItemID"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_corner"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:hint="@string/hint4"
+        /><!--android:text="@string/fruit6"-->
+
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/ItemID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_corner"
+        android:text="@string/btn10" />
+
+
+    <EditText
+        android:id="@+id/IdItem"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_corner"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnSearch"
+        android:layout_marginTop="150dp"
+        android:hint="@string/hint1"
+        /><!--android:text="@string/fruit6"-->
+
     <EditText
         android:id="@+id/name"
         android:layout_width="300dp"
@@ -13,10 +49,11 @@
         android:background="@drawable/edit_corner"
         android:paddingLeft="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_below="@id/IdItem"
+        android:layout_marginTop="10dp"
         android:hint="@string/hint1"
-        android:text="@string/fruit6"
-        />
+        /><!--android:text="@string/fruit6"-->
+
     <EditText
         android:id="@+id/price"
         android:layout_width="300dp"
@@ -27,8 +64,8 @@
         android:layout_below="@id/name"
         android:layout_marginTop="10dp"
         android:hint="@string/hint2"
-        android:text="@string/price3"
-        />
+        /><!--android:text="@string/price3"-->
+
     <EditText
         android:id="@+id/category"
         android:layout_width="300dp"
@@ -39,15 +76,16 @@
         android:layout_below="@id/price"
         android:layout_marginTop="10dp"
         android:hint="@string/hint3"
-        android:text="@string/cat2"
-        />
+        /><!--android:text="@string/cat2"-->
+
 
     <Button
+        android:id="@+id/btnUpdate"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_below="@id/category"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/button_corner"
         android:onClick="table"
         android:text="@string/btn6" />
