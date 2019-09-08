@@ -54,6 +54,7 @@
     <string name="hint1">Enter Product Name</string>
     <string name="hint2">Enter Price</string>
     <string name="hint3">Enter Category</string>
+    <string name="hint4">Enter Item ID</string>
     <string name="col1">PRODUCT NAME</string>
     <string name="col2">CATEGORY</string>
     <string name="col3">PRICE</string>
@@ -83,6 +84,7 @@
     <string name="cat2">FRUITS</string>
     <string name="btn7">BACK</string>
     <string name="btn8">NEXT</string>
+    <string name="btn10">SEARCH</string>
     <string name="start">GET START</string>
     <string name="backDash">BACK TO DASHBOARD</string>
 

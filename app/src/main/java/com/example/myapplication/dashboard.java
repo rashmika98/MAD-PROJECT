@@ -30,7 +30,7 @@ public class dashboard extends AppCompatActivity {
     }
 
     public void removeProduct(View view){
-        Intent intent = new Intent(dashboard.this, product_remove.class);
+        Intent intent = new Intent(dashboard.this, Remove_Product.class);
         startActivity(intent);
     }
 

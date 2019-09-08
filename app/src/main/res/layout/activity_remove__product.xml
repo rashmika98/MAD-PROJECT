@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".edit_product">
+    tools:context=".Remove_Product">
 
 
     <EditText
@@ -80,7 +80,7 @@
 
 
     <Button
-        android:id="@+id/btnUpdate"
+        android:id="@+id/btnDelete"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_below="@id/category"
@@ -88,6 +88,7 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/button_corner"
         android:onClick="table"
-        android:text="@string/btn6" />
+        android:text="@string/btn9" />
+
 
 </RelativeLayout>

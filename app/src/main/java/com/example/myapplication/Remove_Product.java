@@ -16,19 +16,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class edit_product extends AppCompatActivity {
+public class Remove_Product extends AppCompatActivity {
 
     EditText txtItemID, txtIdItem, txtName, txtPrice, txtCat;
-    Button btnSearch, btnUpdate;
+    Button btnSearch, btnDelete;
 
     DatabaseReference ref;
 
     Item item;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_product);
+        setContentView(R.layout.activity_remove__product);
 
 
         txtItemID = findViewById(R.id.ItemID);
@@ -38,8 +39,7 @@ public class edit_product extends AppCompatActivity {
         txtCat = findViewById(R.id.category);
 
         btnSearch = findViewById(R.id.btnSearch);
-        btnUpdate = findViewById(R.id.btnUpdate);
-
+        btnDelete = findViewById(R.id.btnDelete);
 
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +50,7 @@ public class edit_product extends AppCompatActivity {
                 SearchRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                         if (dataSnapshot.hasChildren()){
 
                             txtIdItem.setText(dataSnapshot.child("itemID").getValue().toString());
@@ -57,9 +58,9 @@ public class edit_product extends AppCompatActivity {
                             txtPrice.setText(dataSnapshot.child("price").getValue().toString());
                             txtCat.setText(dataSnapshot.child("category").getValue().toString());
                         }
-                        
+
                         else{
-                            Toast.makeText(edit_product.this, "No Source to Display", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Remove_Product.this, "No Source to Display", Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -68,42 +69,33 @@ public class edit_product extends AppCompatActivity {
 
                     }
                 });
-
             }
         });
 
 
-
-        btnUpdate.setOnClickListener(new View.OnClickListener() {
+        btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Item");
-                upRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Item");
+                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                        item = new Item();
-
-                        if(dataSnapshot.hasChild(txtIdItem.getText().toString())){
-
-                            item.setItemID(txtIdItem.getText().toString());
-                            item.setProductName(txtName.getText().toString());
-                            item.setPrice(Double.parseDouble(txtPrice.getText().toString()));
-                            item.setCategory(txtCat.getText().toString());
+                        if (dataSnapshot.hasChild(txtIdItem.getText().toString())){
 
                             ref = FirebaseDatabase.getInstance().getReference().child("Item").child(txtIdItem.getText().toString());
-                            ref.setValue(item);
+                            ref.removeValue();
                             clearAll();
 
-                            Toast.makeText(edit_product.this, "Updated Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Remove_Product.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+
                         }
-                        
+
                         else{
 
-                            Toast.makeText(edit_product.this, "No source to Update", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Remove_Product.this, "No Source to Delete", Toast.LENGTH_SHORT).show();
                         }
-                        
                     }
 
                     @Override
@@ -111,8 +103,10 @@ public class edit_product extends AppCompatActivity {
 
                     }
                 });
+
             }
         });
+
     }
 
 
@@ -127,7 +121,7 @@ public class edit_product extends AppCompatActivity {
 
     public void table(View view){
 
-        Intent intent = new Intent( edit_product.this, products.class);
+        Intent intent = new Intent( Remove_Product.this, products.class);
         startActivity(intent);
     }
 }
