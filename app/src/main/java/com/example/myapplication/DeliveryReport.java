@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,8 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.common.internal.Objects;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class DeliveryReport extends AppCompatActivity {
 
@@ -58,7 +63,44 @@ public class DeliveryReport extends AppCompatActivity {
 
         }
         });
-        }
+
+        //delete code
+
+        Delete_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                DatabaseReference deleref = FirebaseDatabase.getInstance().getReference().child("DeliveryReport");
+                deleref.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        if (dataSnapshot.hasChild(Order_Id_txt .getText().toString())) {
+
+                            ref = FirebaseDatabase.getInstance().getReference().child("DeliveryReport").child(Order_Id_txt.getText().toString());
+                            ref.removeValue();
+
+                            Toast.makeText(DeliveryReport.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+                        }
+
+                        else{
+
+                            Toast.makeText(DeliveryReport.this, "No Source to Delete", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+        });
+
+
+
+    }
 
 
 
@@ -71,4 +113,4 @@ public void clearAll(){
 
         }
 
-        }
+}
