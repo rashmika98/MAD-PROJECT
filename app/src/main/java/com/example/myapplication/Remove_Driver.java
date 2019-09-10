@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,10 +24,6 @@ public class Remove_Driver extends AppCompatActivity {
     DatabaseReference DBref;
 
     Driver driver;
-
-
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_remove__driver);
@@ -41,7 +38,8 @@ public class Remove_Driver extends AppCompatActivity {
         txtuName = findViewById(R.id.adtxt6);
         txtPassword = findViewById(R.id.adtxt7);
 
-        btnSearch = findViewById(R.id.btnsearch);
+       btnSearch = findViewById(R.id.btnsearch);
+//        btnSearch = findViewById(R.id.button12);
         btnDelete = findViewById(R.id.rebtn1);
 
 
@@ -49,25 +47,40 @@ public class Remove_Driver extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                DatabaseReference FindRef = FirebaseDatabase.getInstance().getReference().child("Driver").child(txtSearch.getText().toString());
-                FindRef.addListenerForSingleValueEvent(new ValueEventListener() {
+               // DatabaseReference FindRef = FirebaseDatabase.getInstance().getReference().child("Driver").child("983081894V");
+
+
+                DBref = FirebaseDatabase.getInstance().getReference().child("Driver").child(txtSearch.getText().toString());
+                //Log.i("NIC", txtSearch.getText().toString());
+                DBref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                        if (dataSnapshot.hasChildren()){
+                        try {
+
+                            if (dataSnapshot.hasChildren()) {
+
+
+                                txtNIC.setText(dataSnapshot.child("nic").getValue().toString().trim());
 
                             txtName.setText(dataSnapshot.child("name").getValue().toString());
-                            txtNIC.setText(dataSnapshot.child("nic").getValue().toString());
                             txtAddress.setText(dataSnapshot.child("address").getValue().toString());
                             txtEmail.setText(dataSnapshot.child("email").getValue().toString());
                             txtDLicense.setText(dataSnapshot.child("dLicense").getValue().toString());
                             txtuName.setText(dataSnapshot.child("uname").getValue().toString());
                             txtPassword.setText(dataSnapshot.child("dpaw").getValue().toString());
+
+
+                            }
+                            else{
+                                Toast.makeText(Remove_Driver.this, "No Source to Display", Toast.LENGTH_SHORT).show();
+                            }
+                        }catch (Exception ex){
+
+                            Toast.makeText(Remove_Driver.this, ex.getMessage().toString(), Toast.LENGTH_SHORT).show();
+
                         }
 
-                        else{
-                            Toast.makeText(Remove_Driver.this, "No Source to Display", Toast.LENGTH_SHORT).show();
-                        }
 
                     }
 
@@ -76,6 +89,15 @@ public class Remove_Driver extends AppCompatActivity {
 
                     }
                 });
+
+
+
+
+
+
+
+
+
             }
         });
 
