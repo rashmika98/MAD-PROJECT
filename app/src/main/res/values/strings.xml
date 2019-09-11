@@ -89,12 +89,12 @@
     <string name="backDash">BACK TO DASHBOARD</string>
 
 
-    <string name="textView">First Name</string>
-    <string name="textView2">Last Name</string>
+    <string name="textView">Full Name</string>
+    <string name="textView2">User Name</string>
     <string name="textView3">E-mail</string>
-    <string name="textView4">Birth Date</string>
-    <string name="textView5">Sex</string>
-    <string name="textView6">City</string>
+    <string name="textView4">Address </string>
+    <string name="textView5">Gender</string>
+    <string name="textView6">Phone Number</string>
     <string name="textView7">Item 01</string>
     <string name="textView8">LKR 222</string>
     <string name="textView9">Item 02</string>
@@ -120,6 +120,11 @@
     <string name="sample6">D0023</string>
     <string name="btn9">DELETE</string>
     <string name="logout">LOG OUT</string>
+
+
+
+
+
 
 
 </resources>
