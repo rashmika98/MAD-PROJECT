@@ -20,13 +20,13 @@
         >
 
         <EditText
+            android:id="@+id/txtfull"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="@string/txt3"
-            android:ems="10"
             android:inputType="text"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -39,13 +39,13 @@
         >
 
         <EditText
+            android:id="@+id/txtusr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="@string/txt4"
-            android:ems="10"
             android:inputType="text"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -58,13 +58,13 @@
         >
 
         <EditText
+            android:id="@+id/txtmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="@string/txt5"
-            android:ems="10"
             android:inputType="text"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -77,13 +77,13 @@
         >
 
         <EditText
+            android:id="@+id/txtadd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="@string/txt6"
-            android:ems="10"
             android:inputType="textPostalAddress"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -97,13 +97,13 @@
         >
 
         <EditText
+            android:id="@+id/txtpno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="@string/txt7"
-            android:ems="10"
             android:inputType="phone"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -119,13 +119,13 @@
         >
 
         <EditText
+            android:id="@+id/txtpswrd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="@string/txt8"
-            android:ems="10"
             android:inputType="text"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -139,13 +139,13 @@
         >
 
         <EditText
+            android:id="@+id/txtcpswrd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/txt9"
             android:ems="10"
+            android:hint="@string/txt9"
             android:inputType="text"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
@@ -154,40 +154,42 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         >
+
         <TextView
+            android:id="@+id/txtgen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt10"
-            android:textSize="22sp"
-            />
+            android:textSize="22sp" />
 
 
         <RadioButton
+            android:id="@+id/radmale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:text="@string/radio1"
-            android:layout_marginLeft="10dp"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
 
         <RadioButton
+            android:id="@+id/radfemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio2"
             android:layout_marginLeft="10dp"
-            android:textSize="20sp"
-            />
+            android:text="@string/radio2"
+            android:textSize="20sp" />
 
     </RadioGroup>
 
     <Button
+        android:id="@+id/btnreg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn3"
-        android:textSize="23dp"
-        android:textColor="#fff"
-        android:background="@drawable/loginbutton"
         android:layout_marginTop="25dp"
-        />
+        android:background="@drawable/loginbutton"
+        android:text="@string/btn3"
+        android:textColor="#fff"
+        android:textSize="23dp"
+        android:onClick="reg"/>
     
 </LinearLayout>
