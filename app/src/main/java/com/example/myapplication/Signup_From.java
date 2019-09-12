@@ -26,7 +26,7 @@ public class Signup_From extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup__from);
 
-
+        db = FirebaseDatabase.getInstance().getReference();
         txtfname = findViewById(R.id.txtfull);
                 txtuname= findViewById(R.id.txtusr);
         txtemail= findViewById(R.id.txtmail);
@@ -40,11 +40,6 @@ public class Signup_From extends AppCompatActivity {
       //  rfemale= findViewById(R.id.radfemale);
 
     }
-
-
-
-
-
     private void clearControls(){
 
         txtfname.setText("");
@@ -61,8 +56,6 @@ public class Signup_From extends AppCompatActivity {
 
     public void reg(View view)
     {
-        db = FirebaseDatabase.getInstance().getReference().child("cus_details_add");
-
         try {
             if (TextUtils.isEmpty(txtfname.getText().toString()))
                 Toast.makeText(getApplicationContext(), "Please enter at least two names", Toast.LENGTH_SHORT).show();
@@ -88,7 +81,7 @@ public class Signup_From extends AppCompatActivity {
                 // cus.setMale(rmale.getText().toString().trim());
                 //cus.setFemale(rfemale.getText().toString().trim());
 
-                db.push().setValue(cus);
+                db.child("DATA_DATA").push().setValue(cus);
                 //db.child("cus1").setValue(cus);
                 Toast.makeText(getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
                 clearControls();
