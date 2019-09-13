@@ -14,8 +14,11 @@ import java.util.Locale;
 
 public class UserProfile extends AppCompatActivity {
 
+          Signup_From db;
 
-//            cus_details_add;
+
+
+
 
         TextView dsplyfname,dsplyuname,dsplymail,dsplyadd,dsplypno;
     @Override
@@ -38,9 +41,26 @@ public class UserProfile extends AppCompatActivity {
     protected void onstart(){
         super.onStart();
 
-//        dsplyfname.setText(data.getfname());
-//        dsplyuname.setText();
+        cus_details_add cus = cus_details_add.getInstance();
+
+        dsplyfname.setText(cus.getfname());
+        dsplyuname.setText(cus.getUsrname());
+        dsplymail.setText(cus.getEmail());
+        dsplyadd.setText(cus.getAddress());
+        dsplypno.setText(cus.getPno());
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        cus_details_add cus = cus_details_add.getInstance();
+        dsplyfname.setText(cus.getfname());
+        dsplyuname.setText(cus.getUsrname());
+        dsplymail.setText(cus.getEmail());
+        dsplyadd.setText(cus.getAddress());
+        dsplypno.setText(cus.getPno());
+    }
+
     public void home(View view){
 
         Intent i122 = new Intent( UserProfile.this,Grocery.class);

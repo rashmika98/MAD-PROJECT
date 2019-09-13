@@ -12,9 +12,25 @@ public class cus_details_add {
    // private String male;
     //private String female;
 
+    private static cus_details_add data=null;
 
-    public cus_details_add() {
-    }
+   private cus_details_add (){}
+
+   public static cus_details_add getInstance(){
+
+       if (data==null)
+
+           data=new cus_details_add();
+
+       return data;
+
+   }
+
+
+
+
+
+
 
     public String getfname() {
         return fname;

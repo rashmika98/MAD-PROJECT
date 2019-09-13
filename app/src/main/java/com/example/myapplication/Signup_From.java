@@ -19,7 +19,7 @@ public class Signup_From extends AppCompatActivity {
     Button btnregister;
    // RadioButton rmale,rfemale;
     DatabaseReference db;
-    cus_details_add cus = new cus_details_add();
+    cus_details_add cus = cus_details_add.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
