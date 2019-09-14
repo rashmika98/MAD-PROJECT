@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +12,13 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText name;
@@ -18,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button login;
 
+    UserLogin userLogin;
 
     RelativeLayout layout;
     Handler handler = new Handler();
@@ -66,18 +75,61 @@ public class MainActivity extends AppCompatActivity {
             Intent intent2 = new Intent(MainActivity.this,dashboard.class);
             startActivity(intent2);
             Toast.makeText(getApplicationContext(),"Login Pass!!",Toast.LENGTH_LONG).show();
-        }else if((username.equals("saluk")) && (password.equals("9900"))){
-        Intent intent3 = new Intent(MainActivity.this,DeliveryProfile.class);
-        startActivity(intent3);
-        Toast.makeText(getApplicationContext(),"Login Pass!!",Toast.LENGTH_LONG).show();
-        }else if((username.equals("customer")) && (password.equals("0000"))){
+        }
+//        else if((username.equals("saluk")) && (password.equals("9900"))){
+//        Intent intent3 = new Intent(MainActivity.this,DeliveryProfile.class);
+//        startActivity(intent3);
+//        Toast.makeText(getApplicationContext(),"Login Pass!!",Toast.LENGTH_LONG).show();
+//        }
+        else if((username.equals("customer")) && (password.equals("0000"))){
         Intent intent4 = new Intent(MainActivity.this,UserProfile.class);
         startActivity(intent4);
         Toast.makeText(getApplicationContext(),"Login Pass!!",Toast.LENGTH_LONG).show();
         }
+//        else{
+//            Toast.makeText(getApplicationContext(),"Invalid Password or Username",Toast.LENGTH_LONG).show();
+//        }
+
         else{
-            Toast.makeText(getApplicationContext(),"Invalid Password or Username",Toast.LENGTH_LONG).show();
+
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("UserLogin").child(name.getText().toString());
+
+            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                    if (dataSnapshot.hasChildren()) {
+
+                       // String LoginPass = userLogin.getPassword();
+
+                        String LoginPass = dataSnapshot.child("password").getValue().toString();
+                        if (LoginPass.equalsIgnoreCase(pass.getText().toString())) {
+
+                            Intent intent3 = new Intent(MainActivity.this, DeliveryProfile.class);
+                            startActivity(intent3);
+                            Toast.makeText(getApplicationContext(), "Login Pass!!", Toast.LENGTH_LONG).show();
+
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Invalid Password or Username! Please enter valid userName/Password", Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                    else{
+
+                        Toast.makeText(getApplicationContext(), "Invalid Password or Username", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+
+
         }
+
     }
 
 
