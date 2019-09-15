@@ -5,6 +5,8 @@ public class UserLogin {
 
     private String usename;
     private String password;
+    private String Nic;
+
 
     public UserLogin() {
     }
@@ -23,5 +25,14 @@ public class UserLogin {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public String getNic() {
+        return Nic;
+    }
+
+    public void setNic(String nic) {
+        Nic = nic;
     }
 }

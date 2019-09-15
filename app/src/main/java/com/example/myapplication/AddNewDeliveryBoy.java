@@ -55,6 +55,7 @@ public class AddNewDeliveryBoy extends AppCompatActivity {
 
                 userLogin.setUsename(txtuName.getText().toString());
                 userLogin.setPassword(txtPassword.getText().toString());
+                userLogin.setNic(txtNIC.getText().toString());
 
                 ref = FirebaseDatabase.getInstance().getReference().child("Driver");
                 reff= FirebaseDatabase.getInstance().getReference().child("UserLogin");

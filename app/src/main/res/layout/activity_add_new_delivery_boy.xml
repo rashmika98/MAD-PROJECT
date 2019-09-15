@@ -10,7 +10,7 @@
 
 <ScrollView
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">/>
+    android:layout_height="fill_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -42,7 +42,8 @@
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="180dp"
+                android:layout_below="@id/adtxt1"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/textview"
                 android:hint="@string/txt18"
                 android:inputType="text"
@@ -54,7 +55,8 @@
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="240dp"
+                android:layout_below="@id/adtxt2"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/textview"
                 android:hint="@string/txt6"
                 android:inputType="text"
@@ -67,7 +69,8 @@
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="300dp"
+                android:layout_below="@id/adtxt3"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/textview"
                 android:hint="@string/txt5"
                 android:inputType="text"
@@ -75,18 +78,6 @@
 
                 android:textColor="@color/black" />
 
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="360dp"
-                android:hint="Email"
-                android:textColor="@color/black"
-                android:background="@drawable/textview"
-                android:inputType="text"
-                android:paddingLeft="20dp"
-
-                />
 
 
             <EditText
@@ -94,10 +85,11 @@
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="360dp"
+                android:layout_below="@id/adtxt4"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/textview"
                 android:hint="@string/txt19"
-                android:inputType="phone"
+                android:inputType="text"
                 android:paddingLeft="20dp"
 
                 android:textColor="@color/black" />
@@ -107,7 +99,8 @@
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="420dp"
+                android:layout_below="@id/adtxt5"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/textview"
                 android:hint="@string/txt4"
                 android:inputType="text"
@@ -121,7 +114,8 @@
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="480dp"
+                android:layout_below="@id/adtxt6"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/textview"
                 android:hint="@string/txt8"
                 android:inputType="text"

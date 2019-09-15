@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+                    userLogin = new UserLogin();
+
                     if (dataSnapshot.hasChildren()) {
 
                        // String LoginPass = userLogin.getPassword();
@@ -106,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                         if (LoginPass.equalsIgnoreCase(pass.getText().toString())) {
 
                             Intent intent3 = new Intent(MainActivity.this, DeliveryProfile.class);
+                            intent3.putExtra("NIC", userLogin.getNic());
                             startActivity(intent3);
                             Toast.makeText(getApplicationContext(), "Login Pass!!", Toast.LENGTH_LONG).show();
 
