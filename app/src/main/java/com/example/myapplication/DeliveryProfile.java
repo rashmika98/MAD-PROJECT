@@ -59,8 +59,8 @@ public class DeliveryProfile extends AppCompatActivity {
 
 //        if(getExtra != null) {
 //            ref = FirebaseDatabase.getInstance().getReference().child("Driver").child(getExtra.getString("NIC"));
-            ref = FirebaseDatabase.getInstance().getReference().child("Driver").child("123456789V");
-//            ref = FirebaseDatabase.getInstance().getReference().child("Driver").child(getExtra);
+//            ref = FirebaseDatabase.getInstance().getReference().child("Driver").child("123456789V");
+            ref = FirebaseDatabase.getInstance().getReference().child("Driver").child(getExtra);
 
 
         ref.addListenerForSingleValueEvent(new ValueEventListener() {

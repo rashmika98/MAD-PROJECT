@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                    userLogin = new UserLogin();
+                    userLogin = dataSnapshot.getValue(UserLogin.class);
 
                     if (dataSnapshot.hasChildren()) {
 
