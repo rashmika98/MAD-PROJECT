@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".remove_delivery_report"></activity>
+        <activity android:name=".Search_Product"></activity>
+        <activity android:name=".remove_delivery_report" />
         <activity android:name=".Remove_Driver" />
         <activity android:name=".Remove_Product" />
         <activity android:name=".product_remove" />

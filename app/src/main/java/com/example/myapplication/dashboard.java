@@ -29,6 +29,12 @@ public class dashboard extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    public void searchProduct(View view){
+        Intent intent = new Intent(dashboard.this, Search_Product.class);
+        startActivity(intent);
+    }
+
     public void removeProduct(View view){
         Intent intent = new Intent(dashboard.this, Remove_Product.class);
         startActivity(intent);
