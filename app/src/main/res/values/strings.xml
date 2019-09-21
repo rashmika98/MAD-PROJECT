@@ -51,6 +51,7 @@
     <string name="view4">"SHOPPING CART "</string>
     <string name="view6">REMOVE PRODUCT</string>
     <string name="view5">SEARCH PRODUCT</string>
+    <string name="view7">ADD NEW PRODUCT</string>
     <string name="hint1">Enter Product Name</string>
     <string name="hint2">Enter Price</string>
     <string name="hint3">Enter Category</string>

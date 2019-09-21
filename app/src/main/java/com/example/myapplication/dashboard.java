@@ -15,7 +15,7 @@ public class dashboard extends AppCompatActivity {
     }
 
     public void newproduct(View view){
-        Intent intent = new Intent(dashboard.this, new_product.class);
+        Intent intent = new Intent(dashboard.this, Category.class);
         startActivity(intent);
     }
 
