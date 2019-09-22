@@ -14,17 +14,11 @@ public class cus_details_add {
 
     private static cus_details_add data=null;
 
-   private cus_details_add (){}
-
-   public static cus_details_add getInstance(){
-
-       if (data==null)
-
-           data=new cus_details_add();
-
-       return data;
+   public cus_details_add (){
 
    }
+
+
 
 
 

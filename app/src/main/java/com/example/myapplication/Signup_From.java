@@ -19,14 +19,18 @@ public class Signup_From extends AppCompatActivity {
     Button btnregister;
    // RadioButton rmale,rfemale;
     DatabaseReference db;
-    cus_details_add cus = cus_details_add.getInstance();
+   // cus_details_add cus = cus_details_add.getInstance();
+    cus_details_add cus ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup__from);
 
-        db = FirebaseDatabase.getInstance().getReference();
+        db = FirebaseDatabase.getInstance().getReference().child("cus_details_add");
+        cus = new cus_details_add();
+
         txtfname = findViewById(R.id.txtfull);
                 txtuname= findViewById(R.id.txtusr);
         txtemail= findViewById(R.id.txtmail);
@@ -81,8 +85,11 @@ public class Signup_From extends AppCompatActivity {
                 // cus.setMale(rmale.getText().toString().trim());
                 //cus.setFemale(rfemale.getText().toString().trim());
 
-                db.child("DATA_DATA").push().setValue(cus);
-                //db.child("cus1").setValue(cus);
+                db.push();
+                db.child(txtuname.getText().toString()).setValue(cus);
+
+
+               // db.child("cus1").setValue(cus);
                 Toast.makeText(getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
                 clearControls();
 

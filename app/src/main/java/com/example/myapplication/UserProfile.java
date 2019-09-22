@@ -41,19 +41,20 @@ public class UserProfile extends AppCompatActivity {
     protected void onstart(){
         super.onStart();
 
-        cus_details_add cus = cus_details_add.getInstance();
+        cus_details_add cus = new cus_details_add();
 
         dsplyfname.setText(cus.getfname());
         dsplyuname.setText(cus.getUsrname());
         dsplymail.setText(cus.getEmail());
         dsplyadd.setText(cus.getAddress());
+
         dsplypno.setText(cus.getPno());
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        cus_details_add cus = cus_details_add.getInstance();
+        cus_details_add cus = new cus_details_add();
         dsplyfname.setText(cus.getfname());
         dsplyuname.setText(cus.getUsrname());
         dsplymail.setText(cus.getEmail());

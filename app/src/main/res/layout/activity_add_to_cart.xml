@@ -4,108 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AddToCart">
 
-    <View
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:background="@drawable/back"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:visibility="visible"
-        tools:ignore="MissingConstraints" />
-
-
-    <TextView
-        android:id="@+id/jaja"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@color/colorAccents"
-        android:text="Checkout"
-        android:textColor="@color/colorAccent"
-        android:textSize="22sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:visibility="visible" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="98dp"/>
-
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="397dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="16dp">
-
-
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="381dp"
-        android:layout_height="72dp"
-        android:background="@color/background"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="134dp"
+        android:elevation="6dp"
         tools:ignore="MissingConstraints">
 
 
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/china_cabbage"></ImageView>
+        <TextView
+            android:layout_width="322dp"
+            android:layout_height="153dp"
+            android:paddingTop="110dp"
+            android:text="Add To Cart"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="246dp"
+        android:layout_height="470dp"
+        android:paddingTop="10dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="183dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"></LinearLayout>
 
 
-            <TextView
-                android:id="@+id/itemitem"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:background="@color/background"
-                android:text="Checkout" />
+    </ScrollView>
 
-            <TextView
-                android:id="@+id/subitemitem"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:background="@color/background"
-                android:text="200" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-14dp"
+        tools:layout_editor_absoluteY="378dp">
 
-        </LinearLayout>
+    </RelativeLayout>
 
-        <Button
-            android:layout_width="82dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Remove"
-            android:textColor="@color/black"
-            android:textSize="11sp"></Button>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/onion"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="358dp" />
 
-    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="110dp"
+        android:layout_height="10dp"
+        android:elevation="6dp"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="367dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
