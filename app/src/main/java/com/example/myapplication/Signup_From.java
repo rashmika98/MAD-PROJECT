@@ -63,6 +63,7 @@ public class Signup_From extends AppCompatActivity {
     {
         db = FirebaseDatabase.getInstance().getReference().child("cus_details_add");
 
+
         try {
             if (TextUtils.isEmpty(txtfname.getText().toString()))
                 Toast.makeText(getApplicationContext(), "Please enter at least two names", Toast.LENGTH_SHORT).show();
