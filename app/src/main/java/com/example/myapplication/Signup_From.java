@@ -88,8 +88,10 @@ public class Signup_From extends AppCompatActivity {
                 // cus.setMale(rmale.getText().toString().trim());
                 //cus.setFemale(rfemale.getText().toString().trim());
 
-                db.push().setValue(cus);
+               // db.push().setValue(cus);
                 //db.child("cus1").setValue(cus);
+                db.push();
+                db.child(txtuname.getText().toString()).setValue(cus);
                 Toast.makeText(getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
                 clearControls();
 
