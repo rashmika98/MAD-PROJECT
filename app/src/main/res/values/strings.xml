@@ -32,6 +32,12 @@
     <string name="txt17">CUSTOMER</string>
     <string name="txt18">NIC</string>
     <string name="txt19">Driving License</string>
+    <string name="txtValue1">Order ID : </string>
+    <string name="txtValue2">Customer NIC :</string>
+    <string name="txtValue3">Customer Name :</string>
+    <string name="txtValue4">Delivery ID :</string>
+    <string name="txtValue5">Status :</string>
+    <string name="txtValue6">Address :</string>
     <string name="btn4">INSERT</string>
     <string name="column9">ORDER ID</string>
     <string name="column10">CUSTOMER ID</string>
