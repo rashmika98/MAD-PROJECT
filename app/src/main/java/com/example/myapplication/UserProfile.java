@@ -53,7 +53,10 @@ public class UserProfile extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.hasChildren()) {
                     edit1.setText(dataSnapshot.child("fname").getValue().toString());
-                  //  pwd = dataSnapshot.child("pwrd").getValue().toString();
+                    edit3.setText(dataSnapshot.child("email").getValue().toString());
+                    edit4.setText(dataSnapshot.child("address").getValue().toString());
+                    edit5.setText(dataSnapshot.child("pno").getValue().toString());
+                       //  pwd = dataSnapshot.child("pwrd").getValue().toString();
                 }
             }
 
