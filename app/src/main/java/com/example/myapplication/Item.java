@@ -7,6 +7,16 @@ public class Item {
     private Double price;
     private String Category;
 
+    public String getImageURL() {
+        return ImageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        ImageURL = imageURL;
+    }
+
+    private String ImageURL;
+
     public Item() {
     }
 

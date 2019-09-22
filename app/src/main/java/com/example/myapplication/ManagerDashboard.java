@@ -34,7 +34,8 @@ public class ManagerDashboard<button> extends AppCompatActivity {
 
     public void orders(View view)
     {
-        Intent i1 = new Intent (ManagerDashboard.this,orders.class);
+//        Intent i1 = new Intent (ManagerDashboard.this,orders.class);
+        Intent i1 = new Intent (ManagerDashboard.this,List_Orders.class);
         startActivity(i1);
     }
 

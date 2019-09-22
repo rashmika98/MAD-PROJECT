@@ -32,6 +32,12 @@
     <string name="txt17">CUSTOMER</string>
     <string name="txt18">NIC</string>
     <string name="txt19">Driving License</string>
+    <string name="txtValue1">Order ID : </string>
+    <string name="txtValue2">Customer NIC :</string>
+    <string name="txtValue3">Customer Name :</string>
+    <string name="txtValue4">Delivery ID :</string>
+    <string name="txtValue5">Status :</string>
+    <string name="txtValue6">Address :</string>
     <string name="btn4">INSERT</string>
     <string name="column9">ORDER ID</string>
     <string name="column10">CUSTOMER ID</string>
@@ -51,6 +57,7 @@
     <string name="view4">"SHOPPING CART "</string>
     <string name="view6">REMOVE PRODUCT</string>
     <string name="view5">SEARCH PRODUCT</string>
+    <string name="view7">ADD NEW PRODUCT</string>
     <string name="hint1">Enter Product Name</string>
     <string name="hint2">Enter Price</string>
     <string name="hint3">Enter Category</string>
@@ -85,6 +92,7 @@
     <string name="btn7">BACK</string>
     <string name="btn8">NEXT</string>
     <string name="btn10">SEARCH</string>
+    <string name="btn11">CLEAR</string>
     <string name="start">GET START</string>
     <string name="backDash">BACK TO DASHBOARD</string>
 
@@ -120,11 +128,6 @@
     <string name="sample6">D0023</string>
     <string name="btn9">DELETE</string>
     <string name="logout">LOG OUT</string>
-
-
-
-
-
 
 
 </resources>

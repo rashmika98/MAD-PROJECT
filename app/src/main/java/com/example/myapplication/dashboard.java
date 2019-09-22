@@ -15,7 +15,7 @@ public class dashboard extends AppCompatActivity {
     }
 
     public void newproduct(View view){
-        Intent intent = new Intent(dashboard.this, new_product.class);
+        Intent intent = new Intent(dashboard.this, Category.class);
         startActivity(intent);
     }
 
@@ -26,6 +26,12 @@ public class dashboard extends AppCompatActivity {
 
     public void viewproduct(View view){
         Intent intent = new Intent(dashboard.this, products.class);
+        startActivity(intent);
+    }
+
+
+    public void searchProduct(View view){
+        Intent intent = new Intent(dashboard.this, Search_Product.class);
         startActivity(intent);
     }
 

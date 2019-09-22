@@ -17,9 +17,11 @@ public class AddNewDeliveryBoy extends AppCompatActivity {
     EditText txtName, txtNIC, txtAddress, txtEmail,txtDLicense, txtuName, txtPassword;
     Button btnadd;
 
-    DatabaseReference ref;
+    DatabaseReference ref, reff;
 
     Driver driver;
+
+    UserLogin userLogin;
 
 
     @Override
@@ -38,6 +40,7 @@ public class AddNewDeliveryBoy extends AppCompatActivity {
         btnadd = findViewById(R.id.adbtn1);
 
         driver = new Driver();
+        userLogin = new UserLogin();
 
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,9 +53,15 @@ public class AddNewDeliveryBoy extends AppCompatActivity {
                 driver.setUname(txtuName.getText().toString());
                 driver.setDpaw(txtPassword.getText().toString());
 
+                userLogin.setUsename(txtuName.getText().toString());
+                userLogin.setPassword(txtPassword.getText().toString());
+                userLogin.setNic(txtNIC.getText().toString());
+
                 ref = FirebaseDatabase.getInstance().getReference().child("Driver");
+                reff= FirebaseDatabase.getInstance().getReference().child("UserLogin");
                 //ref.child(String.valueOf(driver.getdLicense())).setValue(driver);
                 ref.child(driver.getNic()).setValue(driver);
+                reff.child(userLogin.getUsename()).setValue(userLogin);
 //                ref.child((driver.getName())).setValue(driver);
 
 //                ref.push().setValue( driver);

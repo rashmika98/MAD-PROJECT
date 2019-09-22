@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,9 @@ import com.google.firebase.database.ValueEventListener;
 public class DeliveryReport extends AppCompatActivity {
 
     EditText  Order_Id_txt  , Address_txt ,Delivery_T_txt , City_txt ;
-    Button Submit_btn ,Delete_btn ;
+    Button Submit_btn ;
+    Button Update ;
+
 
     DatabaseReference ref;
 
@@ -30,6 +33,18 @@ public class DeliveryReport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_report);
 
+        Update = findViewById(R.id.Delete_btn);
+
+        Update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent up = new Intent(getApplicationContext(),remove_delivery_report.class);
+                startActivity(up);
+            }
+        });
+
+
+
 
 
         Order_Id_txt = findViewById(R.id.Order_Id_txt);
@@ -39,7 +54,7 @@ public class DeliveryReport extends AppCompatActivity {
 
 
         Submit_btn = findViewById(R.id.Submit_btn);
-        Delete_btn = findViewById(R.id.Delete_btn);
+
 
 
         deliveryReport = new Delivery_Report_Insert();
@@ -53,8 +68,9 @@ public class DeliveryReport extends AppCompatActivity {
                 deliveryReport.setDiliver_City(  City_txt.getText().toString());
 
 
-                ref = FirebaseDatabase.getInstance().getReference().child(" DeliveryReport");
-        ref.push().setValue( deliveryReport);
+                ref = FirebaseDatabase.getInstance().getReference().child("DeliveryReport");
+        //ref.push().setValue( deliveryReport);
+                ref.child(String.valueOf(deliveryReport.getDiliver_ID())).setValue(deliveryReport);
 
         Toast.makeText(DeliveryReport.this, "Success", Toast.LENGTH_SHORT).show();
 
@@ -65,6 +81,7 @@ public class DeliveryReport extends AppCompatActivity {
         });
 
         //delete code
+        /*
 
         Delete_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +113,9 @@ public class DeliveryReport extends AppCompatActivity {
                     }
                 });
             }
-        });
+        }); */
+
+        //end delete
 
 
 

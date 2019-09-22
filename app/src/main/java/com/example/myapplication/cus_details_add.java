@@ -1,5 +1,15 @@
 package com.example.myapplication;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class cus_details_add {
 
     private String fname;
@@ -12,19 +22,9 @@ public class cus_details_add {
    // private String male;
     //private String female;
 
-    private static cus_details_add data=null;
 
-   public cus_details_add (){
-
-   }
-
-
-
-
-
-
-
-
+    public cus_details_add() {
+    }
 
     public String getfname() {
         return fname;

@@ -14,9 +14,6 @@ import java.util.Locale;
 
 public class UserProfile extends AppCompatActivity {
 
-          Signup_From db;
-
-
 
 
 
@@ -26,13 +23,13 @@ public class UserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_profile);
 
-//        database = new cus_details_add(this);
+        //database = new cus_details_add(this);
 
-        dsplyfname = findViewById(R.id.editText);
-        dsplyuname = findViewById(R.id.editText2);
-        dsplymail = findViewById(R.id.editText6);
-        dsplyadd = findViewById(R.id.editText5);
-        dsplypno = findViewById(R.id.editText4);
+        //dsplyfname = findViewById(R.id.user_profile_dsplyfname);
+        //dsplyuname = findViewById(R.id.user_profile_dsplyuname);
+        //dsplymail = findViewById(R.id.user_profile_dsplymail);
+        //dsplyadd = findViewById(R.id.user_profile_dsplyadd);
+        //dsplypno = findViewById(R.id.user_profile_dsplypno);
 
 
 
@@ -41,27 +38,9 @@ public class UserProfile extends AppCompatActivity {
     protected void onstart(){
         super.onStart();
 
-        cus_details_add cus = new cus_details_add();
-
-        dsplyfname.setText(cus.getfname());
-        dsplyuname.setText(cus.getUsrname());
-        dsplymail.setText(cus.getEmail());
-        dsplyadd.setText(cus.getAddress());
-
-        dsplypno.setText(cus.getPno());
+        //dsplyfname.setText(data.getfname());
+        //dsplyuname.setText();
     }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        cus_details_add cus = new cus_details_add();
-        dsplyfname.setText(cus.getfname());
-        dsplyuname.setText(cus.getUsrname());
-        dsplymail.setText(cus.getEmail());
-        dsplyadd.setText(cus.getAddress());
-        dsplypno.setText(cus.getPno());
-    }
-
     public void home(View view){
 
         Intent i122 = new Intent( UserProfile.this,Grocery.class);
