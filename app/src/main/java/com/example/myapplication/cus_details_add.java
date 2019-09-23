@@ -19,11 +19,33 @@ public class cus_details_add {
     private String pno;
     private String pwrd;
     private String conpwrd;
-   // private String male;
+    private String NIC;
+    public String getConpwrd() {
+        return conpwrd;
+    }
+
+    public void setConpwrd(String conpwrd) {
+        this.conpwrd = conpwrd;
+    }
+
+
+
+
+
+    // private String male;
     //private String female;
 
 
     public cus_details_add() {
+    }
+
+
+    public String getNIC() {
+        return NIC;
+    }
+
+    public void setNIC(String NIC) {
+        this.NIC = NIC;
     }
 
     public String getfname() {
@@ -73,13 +95,7 @@ public class cus_details_add {
     public void setPwrd(String pwrd) {
         this.pwrd = pwrd;}
 
-        public String getconpwrd() {
-            return conpwrd;
-        }
 
-        public void setconpwrd(String conpwrd) {
-            this.conpwrd = conpwrd;
-        }
        //     public String getmale() {
          //       return male;
            // }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -14,10 +15,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class Search_Product extends AppCompatActivity {
 
     EditText txtItemID, txtIdItem, txtName, txtPrice, txtCat;
+    ImageView viewImage;
     Button btnSearch, btnClear;
 
     DatabaseReference ref;
@@ -37,6 +40,7 @@ public class Search_Product extends AppCompatActivity {
         txtName = findViewById(R.id.name);
         txtPrice = findViewById(R.id.price);
         txtCat = findViewById(R.id.category);
+        viewImage =(ImageView) findViewById(R.id.ProductViewImageSearch);
 
         btnSearch = findViewById(R.id.btnSearch);
         btnClear = findViewById(R.id.btnClear);
@@ -57,6 +61,9 @@ public class Search_Product extends AppCompatActivity {
                             txtName.setText(dataSnapshot.child("productName").getValue().toString());
                             txtPrice.setText(dataSnapshot.child("price").getValue().toString());
                             txtCat.setText(dataSnapshot.child("category").getValue().toString());
+
+                            String image = dataSnapshot.child("imageURL").getValue().toString();
+                            Picasso.get().load(image).into(viewImage);
                         }
 
                         else{
@@ -92,6 +99,8 @@ public class Search_Product extends AppCompatActivity {
         txtName.setText("");
         txtPrice.setText("");
         txtCat.setText("");
+//        viewImage.setImageURI(null);
+
     }
 
 }

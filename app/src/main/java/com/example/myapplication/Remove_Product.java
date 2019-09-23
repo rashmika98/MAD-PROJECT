@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -77,32 +78,46 @@ public class Remove_Product extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Item");
-                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                        if (dataSnapshot.hasChild(txtIdItem.getText().toString())){
+                try{
 
-                            ref = FirebaseDatabase.getInstance().getReference().child("Item").child(txtIdItem.getText().toString());
-                            ref.removeValue();
-                            clearAll();
-
-                            Toast.makeText(Remove_Product.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
-
-                        }
-
-                        else{
-
-                            Toast.makeText(Remove_Product.this, "No Source to Delete", Toast.LENGTH_SHORT).show();
-                        }
+                    if (TextUtils.isEmpty(txtItemID.getText().toString()))
+                    {
+                        Toast.makeText(Remove_Product.this, "Please enter an Valid Item ID here", Toast.LENGTH_SHORT).show();
                     }
+                    else {
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Item");
+                        delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+                                if (dataSnapshot.hasChild(txtIdItem.getText().toString())){
+
+                                    ref = FirebaseDatabase.getInstance().getReference().child("Item").child(txtIdItem.getText().toString());
+                                    ref.removeValue();
+                                    clearAll();
+
+                                    Toast.makeText(Remove_Product.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+
+                                }
+
+                                else{
+
+                                    Toast.makeText(Remove_Product.this, "No Source to Delete", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
                     }
-                });
+                }catch (NumberFormatException e){
+
+                    Toast.makeText(Remove_Product.this, "Error In Deleting", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

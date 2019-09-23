@@ -41,7 +41,8 @@ public class ManagerDashboard<button> extends AppCompatActivity {
 
     public void cusView(View view)
     {
-        Intent i1 = new Intent (ManagerDashboard.this,cus_view.class);
+//        Intent i1 = new Intent (ManagerDashboard.this,cus_view.class);
+        Intent i1 = new Intent (ManagerDashboard.this,List_Cus.class);
         startActivity(i1);
     }
 

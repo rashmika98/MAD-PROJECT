@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,7 @@ public class Remove_Driver extends AppCompatActivity {
     EditText txtSearch, txtName, txtNIC, txtAddress, txtEmail,txtDLicense, txtuName, txtPassword;
     Button btnSearch, btnDelete;
 
-    DatabaseReference DBref;
+    DatabaseReference DBref, ref;
 
     Driver driver;
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,32 +109,45 @@ public class Remove_Driver extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Driver");
-                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                try{
 
-                        if (dataSnapshot.hasChild(txtNIC.getText().toString())){
-
-                            DBref = FirebaseDatabase.getInstance().getReference().child("Driver").child(txtNIC.getText().toString());
-                            DBref.removeValue();
-                            clearAll();
-
-                            Toast.makeText(Remove_Driver.this, "Remove Successfully", Toast.LENGTH_SHORT).show();
-                        }
-
-                        else{
-
-                            Toast.makeText(Remove_Driver.this, "No Source to Delete", Toast.LENGTH_SHORT).show();
-                        }
-
+                    if (TextUtils.isEmpty(txtSearch.getText().toString()))
+                    {
+                        Toast.makeText(Remove_Driver.this, "Please enter an Valid NIC here", Toast.LENGTH_SHORT).show();
                     }
+                    else {
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Driver");
+                        delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+                                if (dataSnapshot.hasChild(txtNIC.getText().toString())) {
+
+                                    DBref = FirebaseDatabase.getInstance().getReference().child("Driver").child(txtNIC.getText().toString());
+                                    ref = FirebaseDatabase.getInstance().getReference().child("UserLogin").child(txtuName.getText().toString());
+                                    DBref.removeValue();
+                                    ref.removeValue();
+                                    clearAll();
+
+                                    Toast.makeText(Remove_Driver.this, "Remove Successfully", Toast.LENGTH_SHORT).show();
+                                } else {
+
+                                    Toast.makeText(Remove_Driver.this, "No Source to Delete", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
                     }
-                });
+                    }catch (NumberFormatException e){
+
+                        Toast.makeText(Remove_Driver.this, "Error In Deleting", Toast.LENGTH_SHORT).show();
+                    }
             }
         });
     }

@@ -30,6 +30,15 @@
         android:text="@string/btn10" />
 
 
+    <ImageView
+        android:id="@+id/ProductViewImage"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginHorizontal="50dp"
+        android:layout_below="@+id/btnSearch"
+        android:layout_marginTop="20dp"/>
+
     <EditText
         android:id="@+id/IdItem"
         android:layout_width="300dp"

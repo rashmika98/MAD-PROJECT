@@ -3,7 +3,9 @@ package com.example.myapplication;
         import androidx.appcompat.app.AppCompatActivity;
 
 
+        import android.content.Intent;
         import android.os.Bundle;
+        import android.text.TextUtils;
         import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
@@ -45,32 +47,65 @@ public class AddNewDeliveryBoy extends AppCompatActivity {
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                driver.setName(txtName.getText().toString());
-                driver.setNic(txtNIC.getText().toString());
-                driver.setAddress(txtAddress.getText().toString());
-                driver.setEmail(txtEmail.getText().toString());
-                driver.setdLicense(Integer.valueOf(txtDLicense.getText().toString()));
-                driver.setUname(txtuName.getText().toString());
-                driver.setDpaw(txtPassword.getText().toString());
 
-                userLogin.setUsename(txtuName.getText().toString());
-                userLogin.setPassword(txtPassword.getText().toString());
-                userLogin.setNic(txtNIC.getText().toString());
+                try {
 
-                ref = FirebaseDatabase.getInstance().getReference().child("Driver");
-                reff= FirebaseDatabase.getInstance().getReference().child("UserLogin");
-                //ref.child(String.valueOf(driver.getdLicense())).setValue(driver);
-                ref.child(driver.getNic()).setValue(driver);
-                reff.child(userLogin.getUsename()).setValue(userLogin);
-//                ref.child((driver.getName())).setValue(driver);
+                    if (TextUtils.isEmpty(txtName.getText().toString())) {
+                        Toast.makeText(AddNewDeliveryBoy.this, "Please enter Name", Toast.LENGTH_SHORT).show();
+                    } else if (TextUtils.isEmpty(txtNIC.getText().toString())) {
 
-//                ref.push().setValue( driver);
+                        Toast.makeText(AddNewDeliveryBoy.this, "Please Enter NIC Number", Toast.LENGTH_SHORT).show();
 
-                //Toast.makeText(AddNewDeliveryBoy.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
+                    } else if (TextUtils.isEmpty(txtAddress.getText().toString())) {
 
-                Toast.makeText(AddNewDeliveryBoy.this, "Success", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddNewDeliveryBoy.this, "Please Enter a address", Toast.LENGTH_SHORT).show();
 
-                clearAll();
+                    } else if (TextUtils.isEmpty(txtEmail.getText().toString())) {
+
+                        Toast.makeText(AddNewDeliveryBoy.this, "Please Enter an Email", Toast.LENGTH_SHORT).show();
+
+                    } else if (TextUtils.isEmpty(txtDLicense.getText().toString())) {
+                        Toast.makeText(AddNewDeliveryBoy.this, "Please Enter Driving License", Toast.LENGTH_SHORT).show();
+                    } else if (TextUtils.isEmpty(txtuName.getText().toString())) {
+                        Toast.makeText(AddNewDeliveryBoy.this, "Please Enter unique user Name", Toast.LENGTH_SHORT).show();
+                    } else if (TextUtils.isEmpty(txtPassword.getText().toString())) {
+                        Toast.makeText(AddNewDeliveryBoy.this, "Please Enter a password", Toast.LENGTH_SHORT).show();
+                    } else {
+
+                        driver.setName(txtName.getText().toString());
+                        driver.setNic(txtNIC.getText().toString());
+                        driver.setAddress(txtAddress.getText().toString());
+                        driver.setEmail(txtEmail.getText().toString());
+                        driver.setdLicense(Integer.valueOf(txtDLicense.getText().toString()));
+                        driver.setUname(txtuName.getText().toString());
+                        driver.setDpaw(txtPassword.getText().toString());
+
+                        userLogin.setUsename(txtuName.getText().toString());
+                        userLogin.setPassword(txtPassword.getText().toString());
+                        userLogin.setNic(txtNIC.getText().toString());
+
+                        ref = FirebaseDatabase.getInstance().getReference().child("Driver");
+                        reff = FirebaseDatabase.getInstance().getReference().child("UserLogin");
+                        //ref.child(String.valueOf(driver.getdLicense())).setValue(driver);
+                        ref.child(driver.getNic()).setValue(driver);
+                        reff.child(userLogin.getUsename()).setValue(userLogin);
+                        //                ref.child((driver.getName())).setValue(driver);
+
+                        //                ref.push().setValue( driver);
+
+                        //Toast.makeText(AddNewDeliveryBoy.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
+
+                        Toast.makeText(AddNewDeliveryBoy.this, "Success", Toast.LENGTH_SHORT).show();
+
+                        clearAll();
+
+                        Intent intent = new Intent(AddNewDeliveryBoy.this, ManagerDashboard.class);
+                        startActivity(intent);
+                    }
+                }catch (NumberFormatException e){
+
+                    Toast.makeText(AddNewDeliveryBoy.this, "Error In Inserting", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

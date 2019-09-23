@@ -102,66 +102,88 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent2);
                 Toast.makeText(getApplicationContext(), "Login Pass!!", Toast.LENGTH_LONG).show();
             }
+//            else  if ((username.equals(name.getText().toString())) && (password.equals(pass.getText().toString()))) {
+//                editor.putString("key1", name.getText().toString());
+//                editor.commit();
+//                Toast.makeText(getApplicationContext(), "Login Pass!!", Toast.LENGTH_LONG).show();
+//                Intent intent4 = new Intent(MainActivity.this, UserProfile.class);
+//                    startActivity(intent4);
+//
+//            }
+//
+
+//
+//                    Intent intent4 = new Intent(MainActivity.this, UserProfile.class);
+//                    startActivity(intent4);
 //        else if((username.equals("saluk")) && (password.equals("9900"))){
 //        Intent intent3 = new Intent(MainActivity.this,DeliveryProfile.class);
 //        startActivity(intent3);
 //        Toast.makeText(getApplicationContext(),"Login Pass!!",Toast.LENGTH_LONG).show();
 //        }
+//            else {
+//                if ((username.equals(name.getText().toString())) && (password.equals(pass.getText().toString()))) {
+//                    editor.putString("key1", name.getText().toString()) ;
+//                    editor.commit();
+//                    Toast.makeText(getApplicationContext(), "Login Pass!!", Toast.LENGTH_LONG).show();
+//
+//                    Intent intent4 = new Intent(MainActivity.this, UserProfile.class);
+//                    startActivity(intent4);
+//
+//                } else {
+//                    Toast.makeText(getApplicationContext(), "Invalid Password or Username", Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        }
+//    }
+
             else {
-                if ((username.equals(name.getText().toString())) && (password.equals(pass.getText().toString()))) {
-                    editor.putString("key1", name.getText().toString()) ;
-                    editor.commit();
-                    Toast.makeText(getApplicationContext(), "Login Pass!!", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), "Invalid Password or Username", Toast.LENGTH_LONG).show();
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("UserLogin").child(name.getText().toString());
 
-                    Intent intent4 = new Intent(MainActivity.this, UserProfile.class);
-                    startActivity(intent4);
+                databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                } else {
-                    Toast.makeText(getApplicationContext(), "Invalid Password or Username", Toast.LENGTH_LONG).show();
-                }
-            }
-        }
-    }
+                        userLogin = dataSnapshot.getValue(UserLogin.class);
 
-       /* else.{
-            Toast.makeText(getApplicationContext(),"Invalid Password or Username",Toast.LENGTH_LONG).show();
-            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("UserLogin").child(name.getText().toString());
+                        if (dataSnapshot.hasChildren()) {
 
-            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            // String LoginPass = userLogin.getPassword();
 
-                    userLogin = dataSnapshot.getValue(UserLogin.class);
+                            String LoginPass = dataSnapshot.child("password").getValue().toString();
+                            if (LoginPass.equalsIgnoreCase(pass.getText().toString())) {
 
-                    if (dataSnapshot.hasChildren()) {
+                                Intent intent3 = new Intent(MainActivity.this, DeliveryProfile.class);
+                                intent3.putExtra("NIC", userLogin.getNic());
+                                startActivity(intent3);
 
-                       // String LoginPass = userLogin.getPassword();
+//                                Intent intent4 = new Intent(MainActivity.this, UserProfile.class);
+//                                intent4.putExtra("UName", userLogin.getUsename());
+//                                startActivity(intent4);
 
-                        String LoginPass = dataSnapshot.child("password").getValue().toString();
-                        if (LoginPass.equalsIgnoreCase(pass.getText().toString())) {
+//                                Intent inttent1 = new Intent(MainActivity.this, UserProfile.class);
+//                                inttent1.putExtra("Uname", "");
+                                Toast.makeText(getApplicationContext(), "Login Pass!!", Toast.LENGTH_LONG).show();
 
-                            Intent intent3 = new Intent(MainActivity.this, DeliveryProfile.class);
-                            intent3.putExtra("NIC", userLogin.getNic());
-                            startActivity(intent3);
-                            Toast.makeText(getApplicationContext(), "Login Pass!!", Toast.LENGTH_LONG).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Invalid Password or Username! Please enter valid userName/Password", Toast.LENGTH_LONG).show();
+                            }
 
                         } else {
-                            Toast.makeText(getApplicationContext(), "Invalid Password or Username! Please enter valid userName/Password", Toast.LENGTH_LONG).show();
+
+                            Toast.makeText(getApplicationContext(), "Invalid Password or Username", Toast.LENGTH_LONG).show();
                         }
 
                     }
-                    else{
 
-                        Toast.makeText(getApplicationContext(), "Invalid Password or Username", Toast.LENGTH_LONG).show();
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
                     }
-
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                }
-            });*/
+                });
+            }
+        }
+    }
 
 
 

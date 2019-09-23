@@ -20,9 +20,9 @@ public class DeliveryProfile extends AppCompatActivity {
 
 
     EditText txtName, txtNIC, txtAddress, txtEmail,txtDLicense, txtuName, txtPassword;
-    Button btnUpdate;
+    Button btnUpdate, updateDtails;
 
-    DatabaseReference ref, reff;
+    DatabaseReference ref, upref, updateRef;
 
     Driver driver;
 
@@ -44,6 +44,7 @@ public class DeliveryProfile extends AppCompatActivity {
         txtPassword = findViewById(R.id.adtxt7);
 
         btnUpdate = findViewById(R.id.button3);
+        updateDtails = findViewById(R.id.btnNextup);
 
         driver = new Driver();
         userLogin = new UserLogin();
@@ -93,6 +94,64 @@ public class DeliveryProfile extends AppCompatActivity {
             }
         });
 //        }
+
+
+        updateDtails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                upref = FirebaseDatabase.getInstance().getReference().child("Driver");
+                upref.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        if (dataSnapshot.hasChild(txtNIC.getText().toString())) {
+                            try {
+
+                                driver.setNic(txtNIC.getText().toString().trim());
+
+                                driver.setName(txtName.getText().toString().trim());
+                                driver.setAddress(txtAddress.getText().toString().trim());
+                                driver.setEmail(txtEmail.getText().toString().trim());
+                                driver.setdLicense(Integer.valueOf(txtDLicense.getText().toString()));
+                                driver.setUname(txtuName.getText().toString().trim());
+                                driver.setDpaw(txtPassword.getText().toString().trim());
+
+                                userLogin.setUsename(txtuName.getText().toString());
+                                userLogin.setPassword(txtPassword.getText().toString());
+                                userLogin.setNic(txtNIC.getText().toString());
+
+//                    upref = FirebaseDatabase.getInstance().getReference().child("Driver").child("rash");
+                                upref = FirebaseDatabase.getInstance().getReference().child("Driver").child(txtNIC.getText().toString());
+                                upref.setValue(driver);
+
+                                updateRef = FirebaseDatabase.getInstance().getReference().child("UserLogin").child(txtuName.getText().toString());
+                                updateRef.setValue(userLogin);
+
+                                Toast.makeText(getApplicationContext(),"Update Successful",Toast.LENGTH_SHORT).show();
+
+
+
+                            } catch (NumberFormatException e) {
+                                Toast.makeText(getApplicationContext(), "invalid contect number", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else {
+
+
+                            Toast.makeText(getApplicationContext(),"no sourse to display",Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
 
     }
 

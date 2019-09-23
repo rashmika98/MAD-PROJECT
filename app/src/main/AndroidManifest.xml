@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".List_Orders"></activity>
+        <activity android:name=".Updata_Order"></activity>
+        <activity android:name=".List_Product" />
+        <activity android:name=".List_Cus" />
+        <activity android:name=".List_Orders" />
         <activity android:name=".Category" />
         <activity android:name=".Update_Delivery_report" />
         <activity android:name=".Search_Product" />

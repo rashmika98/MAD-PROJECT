@@ -7,178 +7,197 @@
     android:background="@drawable/background"
     tools:context=".DeliveryProfile">
 
-  <ScrollView
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:layout_alignParentTop="true"
-      android:layout_alignParentLeft="true"
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
 
-      >
+        >
 
-    <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-
-
-    <EditText
-        android:id="@+id/adtxt1"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"
-        android:background="@drawable/textview"
-        android:hint="@string/txt3"
-        android:inputType="text"
-        android:paddingLeft="20dp"
-        android:textColor="@color/black" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-    <EditText
-        android:id="@+id/adtxt2"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/adtxt1"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/textview"
-        android:hint="@string/txt18"
-        android:inputType="text"
-        android:paddingLeft="20dp"
-        android:textColor="@color/black" />
+            <Button
+                android:id="@+id/btnNextup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adtxt7"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginEnd="169dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/deliveybutton"
+                android:onClick="De"
+                android:text="Update"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.798"
+                app:layout_constraintStart_toStartOf="@+id/button3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.968" />
 
-    <EditText
-        android:id="@+id/adtxt3"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/adtxt2"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/textview"
-        android:hint="@string/txt6"
-        android:inputType="text"
-        android:paddingLeft="20dp"
-
-        android:textColor="@color/black" />
-
-    <EditText
-        android:id="@+id/adtxt4"
-        android:layout_width="320dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/adtxt3"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/textview"
-        android:hint="@string/txt5"
-        android:inputType="text"
-        android:paddingLeft="20dp"
-
-        android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/adtxt1"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt3"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black" />
 
 
-    <EditText
-        android:id="@+id/adtxt5"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/adtxt4"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/textview"
-        android:hint="@string/txt19"
-        android:inputType="text"
-        android:paddingLeft="20dp"
+            <EditText
+                android:id="@+id/adtxt2"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt1"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt18"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black" />
 
-        android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/adtxt3"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt2"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt6"
+                android:inputType="text"
+                android:paddingLeft="20dp"
 
-    <EditText
-        android:id="@+id/adtxt6"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/adtxt5"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/textview"
-        android:hint="@string/txt4"
-        android:inputType="text"
-        android:paddingLeft="20dp"
+                android:textColor="@color/black" />
 
-        android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/adtxt4"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt3"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt5"
+                android:inputType="text"
+                android:paddingLeft="20dp"
 
-
-    <EditText
-        android:id="@+id/adtxt7"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/adtxt6"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/textview"
-        android:hint="@string/txt8"
-        android:inputType="text"
-        android:paddingLeft="20dp"
-
-        android:textColor="@color/black" />
+                android:textColor="@color/black" />
 
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/adtxt7"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="46dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/deliveybutton"
-            android:text="UPDATE"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.045"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.969" />
+            <EditText
+                android:id="@+id/adtxt5"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt4"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt19"
+                android:inputType="text"
+                android:paddingLeft="20dp"
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/adtxt7"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="37dp"
-            android:layout_marginEnd="298dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/deliveybutton"
-            android:onClick="De"
-            android:text="GET ORDER"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.798"
-            app:layout_constraintStart_toStartOf="@+id/button3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.968" />
+                android:textColor="@color/black" />
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="168dp"
-            android:layout_height="111dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="105dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="138dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/editText5"
-            app:layout_constraintHorizontal_bias="0.534"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.152"
-            app:srcCompat="@drawable/admin" />
+            <EditText
+                android:id="@+id/adtxt6"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt5"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt4"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+
+                android:textColor="@color/black" />
 
 
-    </RelativeLayout>
+            <EditText
+                android:id="@+id/adtxt7"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/adtxt6"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textview"
+                android:hint="@string/txt8"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+
+                android:textColor="@color/black" />
+
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adtxt7"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="43dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/deliveybutton"
+                android:text="insert"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.969" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adtxt7"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginEnd="290dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/deliveybutton"
+                android:onClick="De"
+                android:text="GET ORDER"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.798"
+                app:layout_constraintStart_toStartOf="@+id/button3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.968" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="168dp"
+                android:layout_height="111dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="138dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editText5"
+                app:layout_constraintHorizontal_bias="0.534"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.152"
+                app:srcCompat="@drawable/admin" />
+
+
+        </RelativeLayout>
 
 
 
@@ -187,6 +206,6 @@
 
 
 
-  </ScrollView>
+    </ScrollView>
 
 </RelativeLayout>

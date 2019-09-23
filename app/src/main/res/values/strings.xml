@@ -38,6 +38,10 @@
     <string name="txtValue4">Delivery ID :</string>
     <string name="txtValue5">Status :</string>
     <string name="txtValue6">Address :</string>
+    <string name="txtValue7">Email :</string>
+    <string name="txtValue8">Phone Number :</string>
+    <string name="txtValue9">Password :</string>
+    <string name="txtValue10">UserName :</string>
     <string name="btn4">INSERT</string>
     <string name="column9">ORDER ID</string>
     <string name="column10">CUSTOMER ID</string>
@@ -65,6 +69,7 @@
     <string name="col1">PRODUCT NAME</string>
     <string name="col2">CATEGORY</string>
     <string name="col3">PRICE</string>
+    <string name="col4">PRODUCT ID</string>
     <string name="name1">Lettuce</string>
     <string name="qty1">1kg</string>
     <string name="price1">Rs. 25.00</string>

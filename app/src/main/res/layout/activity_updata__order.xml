@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Updata_Order">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:orientation="vertical"
+        android:layout_marginTop="160dp"
+        android:background="#6A006FFF">
+
+
+        <RelativeLayout
+            android:id="@+id/relative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/OrderId"
+                android:textColor="#090909"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/txtValue1"/>
+
+            <EditText
+                android:id="@+id/editTextOrderID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Order Id" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cusNic"
+                android:textColor="#090909"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/txtValue2"/>
+
+            <EditText
+                android:id="@+id/editTextCusNIC"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="170dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Nic" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cusName"
+                android:textColor="#090909"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:textSize="18dp"
+                android:text="@string/txtValue3"/>
+
+
+            <EditText
+                android:id="@+id/editTextCusName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Name" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/address"
+                android:textColor="#090909"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/txtValue6"/>
+
+
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dp"
+
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Address" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DelID"
+                android:textColor="#090909"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/txtValue4"/>
+
+            <EditText
+                android:id="@+id/editTextDelID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Delivery Id " />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/status"
+                android:textColor="#090909"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/txtValue5"/>
+
+            <EditText
+                android:id="@+id/editTextStatus"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="170dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Ststus " />
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btnUpdateOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonupdate"
+            android:text="@string/btn6"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
