@@ -243,4 +243,24 @@ public class new_product extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(new_product.this, dashboard.class);
+        startActivity(intent);
+    }
+
+    public void Search(View view) {
+
+        Intent intent = new Intent(new_product.this, Search_Product.class);
+        startActivity(intent);
+    }
+
+    public void logout(View view){
+        Intent intent1 = new Intent(new_product.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
+
+
 }

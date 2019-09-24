@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -40,7 +41,7 @@ public class List_Cus extends AppCompatActivity {
             @Override
             protected void populateViewHolder(CusViewHolder cusViewHolder, cus_details_add customer, int i) {
 
-                cusViewHolder.setNIC(customer.getNIC());
+//                cusViewHolder.setNIC(customer.getNIC());
                 cusViewHolder.setFname(customer.getfname());
                 cusViewHolder.setAddress(customer.getAddress());
                 cusViewHolder.setEmail(customer.getEmail());
@@ -62,11 +63,11 @@ public class List_Cus extends AppCompatActivity {
             super(itemView);
             mView =itemView;
         }
-        public void setNIC(String NIC)
-        {
-            TextView nic=(TextView)mView.findViewById(R.id.editTextNIC);
-            nic.setText(NIC);
-        }
+//        public void setNIC(String NIC)
+//        {
+//            TextView nic=(TextView)mView.findViewById(R.id.editTextNIC);
+//            nic.setText(NIC);
+//        }
         public  void setFname (String CusName)
         {
             TextView Name = (TextView)mView.findViewById(R.id.editTextCusFName);
@@ -100,5 +101,17 @@ public class List_Cus extends AppCompatActivity {
             UserName.setText(UName);
         }
     }
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(List_Cus.this, ManagerDashboard.class);
+        startActivity(intent);
+    }
+    public void logout(View view){
+        Intent intent1 = new Intent(List_Cus.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
+
 
 }

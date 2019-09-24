@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.Continuation;
@@ -34,7 +35,8 @@ import com.squareup.picasso.Picasso;
 
 public class edit_product extends AppCompatActivity {
 
-    EditText txtItemID, txtIdItem, txtName, txtPrice, txtCat;
+    EditText txtItemID, txtName, txtPrice, txtCat;
+    TextView txtIdItem;
     ImageView viewImage;
     Button btnSearch, btnUpdate;
 
@@ -306,4 +308,24 @@ public class edit_product extends AppCompatActivity {
         Intent intent = new Intent( edit_product.this, products.class);
         startActivity(intent);
     }
+
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(edit_product.this, dashboard.class);
+        startActivity(intent);
+    }
+
+    public void Search(View view) {
+
+        Intent intent = new Intent(edit_product.this, Search_Product.class);
+        startActivity(intent);
+    }
+
+    public void logout(View view){
+        Intent intent1 = new Intent(edit_product.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
+
 }

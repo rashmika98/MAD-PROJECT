@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Remove_Driver"
-    android:background="@drawable/background"
+    android:background="@drawable/background13"
     >
 
 
@@ -38,10 +38,10 @@
                 android:id="@+id/btnsearch"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="70dp"
                 android:layout_below="@+id/reSearch"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/addbutton"
+                android:background="@drawable/deliveybutton"
                 android:text="@string/btn10"
                 android:textColor="#fff"
                 android:textSize="23dp" />
@@ -49,7 +49,7 @@
 
 
 
-            <EditText
+            <TextView
                 android:id="@+id/adtxt1"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
@@ -60,10 +60,11 @@
                 android:hint="@string/txt3"
                 android:inputType="text"
                 android:paddingLeft="20dp"
+                android:textSize="18dp"
                 android:textColor="@color/black" />
 
 
-            <EditText
+            <TextView
                 android:id="@+id/adtxt2"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
@@ -73,10 +74,11 @@
                 android:background="@drawable/textview"
                 android:hint="@string/txt18"
                 android:inputType="text"
+                android:textSize="18dp"
                 android:paddingLeft="20dp"
                 android:textColor="@color/black" />
 
-            <EditText
+            <TextView
                 android:id="@+id/adtxt3"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
@@ -86,11 +88,12 @@
                 android:background="@drawable/textview"
                 android:hint="@string/txt6"
                 android:inputType="text"
+                android:textSize="18dp"
                 android:paddingLeft="20dp"
 
                 android:textColor="@color/black" />
 
-            <EditText
+            <TextView
                 android:id="@+id/adtxt4"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
@@ -100,6 +103,7 @@
                 android:background="@drawable/textview"
                 android:hint="@string/txt5"
                 android:inputType="text"
+                android:textSize="18dp"
                 android:paddingLeft="20dp"
 
                 android:textColor="@color/black" />
@@ -107,7 +111,7 @@
 
 
 
-            <EditText
+            <TextView
                 android:id="@+id/adtxt5"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
@@ -117,11 +121,12 @@
                 android:background="@drawable/textview"
                 android:hint="@string/txt19"
                 android:inputType="phone"
+                android:textSize="18dp"
                 android:paddingLeft="20dp"
 
                 android:textColor="@color/black" />
 
-            <EditText
+            <TextView
                 android:id="@+id/adtxt6"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
@@ -132,11 +137,11 @@
                 android:hint="@string/txt4"
                 android:inputType="text"
                 android:paddingLeft="20dp"
-
+                android:textSize="18dp"
                 android:textColor="@color/black" />
 
 
-            <EditText
+            <TextView
                 android:id="@+id/adtxt7"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
@@ -147,7 +152,7 @@
                 android:hint="@string/txt8"
                 android:inputType="text"
                 android:paddingLeft="20dp"
-
+                android:textSize="18dp"
                 android:textColor="@color/black" />
 
 
@@ -155,10 +160,10 @@
                 android:id="@+id/rebtn1"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="70dp"
                 android:layout_below="@id/adtxt7"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/addbutton"
+                android:background="@drawable/deletebutton"
                 android:text="@string/btn9"
                 android:textColor="#fff"
                 android:textSize="23dp" />
@@ -175,6 +180,41 @@
 
 
     </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="800dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:onClick="Home"
+            android:src="@drawable/home4" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="30dp"
+            android:onClick="Home"
+            android:src="@drawable/search4"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="10dp"
+            android:onClick="logout"
+            android:src="@drawable/logout4"
+
+            />
+
+    </LinearLayout>
 </RelativeLayout>
 
 

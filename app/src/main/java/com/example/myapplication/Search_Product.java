@@ -3,11 +3,13 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,7 +21,8 @@ import com.squareup.picasso.Picasso;
 
 public class Search_Product extends AppCompatActivity {
 
-    EditText txtItemID, txtIdItem, txtName, txtPrice, txtCat;
+    EditText txtItemID, txtName, txtPrice, txtCat;
+    TextView txtIdItem;
     ImageView viewImage;
     Button btnSearch, btnClear;
 
@@ -102,5 +105,19 @@ public class Search_Product extends AppCompatActivity {
 //        viewImage.setImageURI(null);
 
     }
+
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(Search_Product.this, dashboard.class);
+        startActivity(intent);
+    }
+
+    public void logout(View view){
+        Intent intent1 = new Intent(Search_Product.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
+
 
 }

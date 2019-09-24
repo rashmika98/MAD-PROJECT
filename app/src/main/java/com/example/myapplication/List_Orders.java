@@ -118,6 +118,17 @@ public class List_Orders extends AppCompatActivity {
         intent.putExtra("ID",orderId);
         startActivity(intent);
     }
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(List_Orders.this, ManagerDashboard.class);
+        startActivity(intent);
+    }
+    public void logout(View view){
+        Intent intent1 = new Intent(List_Orders.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
 }
 
 

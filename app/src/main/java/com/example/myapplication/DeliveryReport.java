@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -62,23 +63,46 @@ public class DeliveryReport extends AppCompatActivity {
         Submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                deliveryReport.setDiliver_ID(Integer.valueOf( Order_Id_txt.getText().toString()));
-                deliveryReport.setDiliver_Address(Address_txt.getText().toString());
-                deliveryReport.setDiliver_Date(Delivery_T_txt .getText().toString());
-                deliveryReport.setDiliver_City(  City_txt.getText().toString());
+                try {
+                    if (TextUtils.isEmpty(Order_Id_txt.getText().toString())) {
+
+                        Toast.makeText(DeliveryReport.this, "Please enter Name", Toast.LENGTH_SHORT).show();
+
+                    } else if (TextUtils.isEmpty(Address_txt.getText().toString())) {
+
+                        Toast.makeText(DeliveryReport.this, "Please Enter NIC Number", Toast.LENGTH_SHORT).show();
+
+                    } else if (TextUtils.isEmpty(Delivery_T_txt.getText().toString())) {
+
+                        Toast.makeText(DeliveryReport.this, "Please Enter a address", Toast.LENGTH_SHORT).show();
+
+                    } else if (TextUtils.isEmpty(Delivery_T_txt.getText().toString())) {
+
+                        Toast.makeText(DeliveryReport.this, "Please Enter an Email", Toast.LENGTH_SHORT).show();
+
+                    } else
+                        deliveryReport.setDiliver_ID(Integer.valueOf( Order_Id_txt.getText().toString()));
+                        deliveryReport.setDiliver_Address(Address_txt.getText().toString());
+                        deliveryReport.setDiliver_Date(Delivery_T_txt .getText().toString());
+                        deliveryReport.setDiliver_City(  City_txt.getText().toString());
 
 
-                ref = FirebaseDatabase.getInstance().getReference().child("DeliveryReport");
-        //ref.push().setValue( deliveryReport);
-                ref.child(String.valueOf(deliveryReport.getDiliver_ID())).setValue(deliveryReport);
+                        ref = FirebaseDatabase.getInstance().getReference().child("DeliveryReport");
+                //ref.push().setValue( deliveryReport);
+                        ref.child(String.valueOf(deliveryReport.getDiliver_ID())).setValue(deliveryReport);
 
-        Toast.makeText(DeliveryReport.this, "Success", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DeliveryReport.this, "Success", Toast.LENGTH_SHORT).show();
 
-        clearAll();
+                clearAll();
+            }catch (NumberFormatException e){
+
+                Toast.makeText(DeliveryReport.this, "Error In Inserting", Toast.LENGTH_SHORT).show();
+            }
 
 
         }
         });
+    }
 
         //delete code
         /*
@@ -119,7 +143,7 @@ public class DeliveryReport extends AppCompatActivity {
 
 
 
-    }
+
 
 
 

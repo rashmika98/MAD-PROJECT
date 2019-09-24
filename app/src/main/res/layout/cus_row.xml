@@ -19,30 +19,30 @@
             android:background="#6A006FFF">
 
 
-            <RelativeLayout
-                android:id="@+id/relative1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/relative1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
 
-                <TextView
-                    android:id="@+id/NIC"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/txtValue2"
-                    android:textColor="#090909"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:id="@+id/NIC"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="@string/txtValue2"-->
+<!--                    android:textColor="#090909"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textStyle="bold" />-->
 
-                <EditText
-                android:id="@+id/editTextNIC"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="NIC" />
-            </RelativeLayout>
+<!--                <EditText-->
+<!--                android:id="@+id/editTextNIC"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="150dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:hint="NIC" />-->
+<!--            </RelativeLayout>-->
 
 
 
@@ -50,6 +50,7 @@
                 android:id="@+id/relative2"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                  >
             <TextView
                 android:layout_width="match_parent"
@@ -60,13 +61,14 @@
                 android:textSize="18dp"
                 android:text="@string/txtValue3"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextCusFName"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:textSize="18dp"
                 android:hint="Name" />
             </RelativeLayout>
 
@@ -84,12 +86,12 @@
                 android:text="@string/txtValue6"/>
 
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextCusAddress"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
-
+                android:textSize="18dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:hint="Address" />
@@ -110,12 +112,12 @@
                 android:text="@string/txtValue7"/>
 
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextEmail"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
-
+                android:textSize="18dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:hint="E-Mail" />
@@ -136,13 +138,14 @@
                 android:textSize="18dp"
                 android:text="@string/txtValue8"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextPhone"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:textSize="18dp"
                 android:hint="Phone Number" />
 
             </RelativeLayout>
@@ -159,14 +162,18 @@
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:text="@string/txtValue9"/>
-            <EditText
-                android:id="@+id/editTextPassword"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-               android:layout_marginLeft="150dp"
-                android:ems="10"
-                android:inputType="textPassword"
-                android:hint="Password" />
+
+                <TextView
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginBottom="0dp"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textSize="18dp" />
 
             </RelativeLayout>
 
@@ -182,14 +189,16 @@
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:text="@string/txtValue10"/>
-            <EditText
+            <TextView
                 android:id="@+id/editTextUserName"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:hint="User" />
+                android:textSize="18dp"
+                android:hint="User"
+                android:layout_marginBottom="20dp"/>
 
             </RelativeLayout>
 

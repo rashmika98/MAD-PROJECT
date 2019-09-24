@@ -24,10 +24,10 @@
 
             <ImageView
                 android:id="@+id/ProductImageView"
-                android:layout_width="300dp"
+                android:layout_width="200dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
-                android:layout_marginHorizontal="50dp"/>
+                android:layout_marginHorizontal="100dp"/>
 
             <RelativeLayout
                 android:id="@+id/relative1"
@@ -36,6 +36,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
                 android:id="@+id/OrderId"
                 android:textColor="#090909"
                 android:textStyle="bold"
@@ -43,14 +44,15 @@
 
                 android:text="@string/col4"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextProductID"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
+                android:layout_marginLeft="200dp"
                 android:ems="10"
                 android:hint="Product Id"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textSize="18dp"/>
 
             </RelativeLayout>
 
@@ -61,21 +63,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:layout_marginLeft="50dp"
                 android:id="@+id/cusNic"
                 android:textColor="#090909"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:text="@string/col1"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextProductName"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
+                android:layout_marginLeft="200dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:hint="Product Name" />
+                android:hint="Product Name"
+                android:textSize="18dp"/>
 
             </RelativeLayout>
 
@@ -86,6 +89,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
                 android:id="@+id/cusName"
                 android:textColor="#090909"
                 android:textStyle="bold"
@@ -93,14 +97,15 @@
                 android:text="@string/col3"/>
 
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextProductPrice"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-               android:layout_marginLeft="150dp"
+               android:layout_marginLeft="200dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:hint="Price" />
+                android:hint="Price"
+                android:textSize="18dp"/>
 
             </RelativeLayout>
 
@@ -111,6 +116,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
                 android:id="@+id/address"
                 android:textColor="#090909"
                 android:textStyle="bold"
@@ -118,14 +124,16 @@
                 android:text="@string/col2"/>
 
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextProductCat"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginBottom="20dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:hint="Category" />
+                android:hint="Category"
+                android:textSize="18dp"/>
 
             </RelativeLayout>
 

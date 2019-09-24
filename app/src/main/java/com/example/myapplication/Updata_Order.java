@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -19,7 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Updata_Order extends AppCompatActivity {
 
-    EditText orderID, CusNIC, CusName, Addresss, DeliveryID,Status;
+    EditText  CusNIC, CusName, Addresss, DeliveryID,Status;
+    TextView orderID;
     Button btnUpdate;
 
     Order order;
@@ -126,6 +128,17 @@ public class Updata_Order extends AppCompatActivity {
         DeliveryID.setText("");
         Status.setText("");
 
+
+    }
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(Updata_Order.this, ManagerDashboard.class);
+        startActivity(intent);
+    }
+        public void logout(View view){
+        Intent intent1 = new Intent(Updata_Order.this, MainActivity.class);
+        startActivity(intent1);
 
     }
 }

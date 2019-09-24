@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,7 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Remove_Product extends AppCompatActivity {
 
-    EditText txtItemID, txtIdItem, txtName, txtPrice, txtCat;
+    EditText txtItemID, txtName, txtPrice, txtCat;
+    TextView txtIdItem;
     Button btnSearch, btnDelete;
 
     DatabaseReference ref;
@@ -139,4 +141,24 @@ public class Remove_Product extends AppCompatActivity {
         Intent intent = new Intent( Remove_Product.this, products.class);
         startActivity(intent);
     }
+
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(Remove_Product.this, dashboard.class);
+        startActivity(intent);
+    }
+
+    public void Search(View view) {
+
+        Intent intent = new Intent(Remove_Product.this, Search_Product.class);
+        startActivity(intent);
+    }
+
+    public void logout(View view){
+        Intent intent1 = new Intent(Remove_Product.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
+
 }

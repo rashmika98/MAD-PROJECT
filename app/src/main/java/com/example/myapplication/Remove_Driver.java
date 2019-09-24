@@ -3,12 +3,14 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Remove_Driver extends AppCompatActivity {
 
-    EditText txtSearch, txtName, txtNIC, txtAddress, txtEmail,txtDLicense, txtuName, txtPassword;
+    TextView txtSearch, txtName, txtNIC, txtAddress, txtEmail,txtDLicense, txtuName, txtPassword;
     Button btnSearch, btnDelete;
 
     DatabaseReference DBref, ref;
@@ -164,5 +166,16 @@ public class Remove_Driver extends AppCompatActivity {
         txtPassword.setText("");
     }
 
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(Remove_Driver.this, ManagerDashboard.class);
+        startActivity(intent);
+    }
+    public void logout(View view){
+        Intent intent1 = new Intent(Remove_Driver.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
 
     }

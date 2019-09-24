@@ -115,7 +115,7 @@ public class UserProfile extends AppCompatActivity {
 
     EditText edit1 , edit2,edit3,edit4,edit5;
 
-    DatabaseReference db;
+    DatabaseReference readref;
     cus_details_add cus ;
 
     TextView dsplyfname,dsplyuname,dsplymail,dsplyadd,dsplypno;
@@ -138,7 +138,7 @@ public class UserProfile extends AppCompatActivity {
         edit2.setText(Uname);
 
 
-        DatabaseReference readref = FirebaseDatabase.getInstance().getReference().child("cus_details_add").child(edit2.getText().toString());
+        readref = FirebaseDatabase.getInstance().getReference().child("cus_details_add").child(edit2.getText().toString());
         readref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -158,7 +158,7 @@ public class UserProfile extends AppCompatActivity {
             }
         });
 
-        DatabaseReference updtRef = FirebaseDatabase.getInstance().getReference().child("cus_details_add");
+      /*  DatabaseReference updtRef = FirebaseDatabase.getInstance().getReference().child("cus_details_add").child(edit2.getText().toString());
         updtRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -171,8 +171,8 @@ public class UserProfile extends AppCompatActivity {
                         cus.setAddress(edit4.getText().toString().trim());
                         cus.setPno(edit5.getText().toString().trim());
 
-                        db = FirebaseDatabase.getInstance().getReference().child("cus_details_add");
-                        db.setValue(cus);
+                        db.push();
+                        db.child(edit2.getText().toString()).setValue(cus);
 
 
                         Toast.makeText(getApplicationContext(), "Successfully updated", Toast.LENGTH_SHORT).show();
@@ -195,14 +195,14 @@ public class UserProfile extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
-        DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("cus_details_add");
+    /*    DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("cus_details_add").child(edit2.getText().toString());
         delRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.hasChildren()) {
-                    db = FirebaseDatabase.getInstance().getReference().child("cus_details_add");
+
                     db.removeValue();
 
                     Toast.makeText(getApplicationContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show();
@@ -221,7 +221,7 @@ public class UserProfile extends AppCompatActivity {
 
             }
         });
-
+*/
 
 
     }

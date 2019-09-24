@@ -24,4 +24,16 @@ public class Grocery extends AppCompatActivity {
         Intent i = new Intent (Grocery.this,fruit_category.class);
         startActivity(i);
     }
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(Grocery.this, ManagerDashboard.class);
+        startActivity(intent);
+    }
+    public void logout(View view){
+        Intent intent1 = new Intent(Grocery.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
+
 }

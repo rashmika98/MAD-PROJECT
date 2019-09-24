@@ -125,4 +125,15 @@ public class AddNewDeliveryBoy extends AppCompatActivity {
         txtPassword.setText("");
     }
 
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(AddNewDeliveryBoy.this, ManagerDashboard.class);
+        startActivity(intent);
+    }
+    public void logout(View view){
+        Intent intent1 = new Intent(AddNewDeliveryBoy.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
 }

@@ -109,4 +109,24 @@ public class Category extends AppCompatActivity {
         });
 
     }
+
+
+    public void Home(View view) {
+
+        Intent intent = new Intent(Category.this, dashboard.class);
+        startActivity(intent);
+    }
+
+    public void Search(View view) {
+
+        Intent intent = new Intent(Category.this, Search_Product.class);
+        startActivity(intent);
+    }
+
+    public void logout(View view){
+        Intent intent1 = new Intent(Category.this, MainActivity.class);
+        startActivity(intent1);
+
+    }
+
 }

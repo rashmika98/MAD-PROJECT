@@ -25,7 +25,7 @@
         android:layout_below="@id/ItemID"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_corner"
+        android:background="@drawable/searchbutton"
         android:text="@string/btn10" />
 
 
@@ -38,7 +38,7 @@
         android:layout_below="@+id/btnSearch"
         android:layout_marginTop="20dp"/>
 
-    <EditText
+    <TextView
         android:id="@+id/IdItem"
         android:layout_width="300dp"
         android:layout_height="40dp"
@@ -47,7 +47,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnSearch"
         android:layout_marginTop="150dp"
-        android:hint="@string/hint1"
+        android:textSize="15dp"
+        android:hint="Prodct ID"
         /><!--android:text="@string/fruit6"-->
 
     <EditText
@@ -59,7 +60,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/IdItem"
         android:layout_marginTop="10dp"
-        android:hint="@string/hint1"
+        android:hint="Product Name"
         /><!--android:text="@string/fruit6"-->
 
     <EditText
@@ -71,7 +72,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/name"
         android:layout_marginTop="10dp"
-        android:hint="@string/hint2"
+        android:hint="Product Price"
         /><!--android:text="@string/price3"-->
 
     <EditText
@@ -83,7 +84,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/price"
         android:layout_marginTop="10dp"
-        android:hint="@string/hint3"
+        android:hint="Category"
         /><!--android:text="@string/cat2"-->
 
 
@@ -94,8 +95,43 @@
         android:layout_below="@id/category"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="@drawable/button_corner"
+        android:background="@drawable/clearbutton"
         android:text="@string/btn11" />
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="800dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:onClick="Home"
+            android:src="@drawable/home4" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="30dp"
+            android:onClick="Home"
+            android:src="@drawable/search4"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="10dp"
+            android:onClick="logout"
+            android:src="@drawable/logout4"
+
+            />
+
+    </LinearLayout>
 
 </RelativeLayout>
